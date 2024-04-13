@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cuyadid4uvhrd"]
+
+[ext_resource type="AudioStream" uid="uid://cn6jibcc0boi3" path="res://light-switch-button-gentle-betacut-1-00-00.mp3" id="1_gg6cb"]
+[ext_resource type="Script" path="res://SoundClick.gd" id="2_cb5ic"]
+[ext_resource type="Texture2D" uid="uid://chhmarseej06m" path="res://button .jpg" id="2_f5cla"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("2_cb5ic")
+
+[node name="Button" type="Button" parent="Node2D"]
+offset_left = 191.0
+offset_top = 131.0
+offset_right = 580.0
+offset_bottom = 521.0
+icon = ExtResource("2_f5cla")
+
+[node name="music" type="AudioStreamPlayer2D" parent="Node2D"]
+position = Vector2(380, 352)
+scale = Vector2(1.94619, 1.87958)
+stream = ExtResource("1_gg6cb")
+
+[connection signal="pressed" from="Node2D/Button" to="Node2D" method="_on_button_pressed"]
