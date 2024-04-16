@@ -1,4 +1,14 @@
-[gd_scene format=3 uid="uid://ponwt08w0lvj"]
+[gd_scene load_steps=4 format=3 uid="uid://ponwt08w0lvj"]
+
+[ext_resource type="Script" path="res://Scripts/HSlider.gd" id="1_d4007"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_772ja"]
+blend_mode = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_nb5qy"]
+font_size = 27
+outline_size = 2
+outline_color = Color(0.105882, 0, 0.65098, 1)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -7,3 +17,42 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0666667, 0.156863, 0.360784, 1)
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+material = SubResource("CanvasItemMaterial_772ja")
+layout_direction = 1
+layout_mode = 0
+offset_left = 34.0
+offset_top = 26.0
+offset_right = 267.0
+offset_bottom = 103.0
+
+[node name="ColorRect" type="ColorRect" parent="PanelContainer"]
+layout_mode = 2
+color = Color(0.666667, 0.760784, 0.843137, 1)
+
+[node name="VboxContents" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_stretch_ratio = 0.0
+
+[node name="Label" type="Label" parent="PanelContainer/VboxContents"]
+layout_mode = 2
+text = "Master Volume"
+label_settings = SubResource("LabelSettings_nb5qy")
+horizontal_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="PanelContainer/VboxContents"]
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+script = ExtResource("1_d4007")
