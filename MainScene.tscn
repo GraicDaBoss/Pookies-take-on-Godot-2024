@@ -1,6 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://ponwt08w0lvj"]
+[gd_scene load_steps=7 format=3 uid="uid://ponwt08w0lvj"]
 
 [ext_resource type="Script" path="res://Scripts/HSlider.gd" id="1_d4007"]
+[ext_resource type="Texture2D" uid="uid://chhmarseej06m" path="res://button .jpg" id="2_t58g0"]
+[ext_resource type="Script" path="res://Scripts/SoundClick.gd" id="3_ekmnc"]
+[ext_resource type="AudioStream" uid="uid://cn6jibcc0boi3" path="res://light-switch-button-gentle-betacut-1-00-00.mp3" id="4_pvtdv"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_772ja"]
 blend_mode = 1
@@ -56,3 +59,21 @@ layout_mode = 2
 max_value = 1.0
 step = 0.001
 script = ExtResource("1_d4007")
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("3_ekmnc")
+
+[node name="Button" type="Button" parent="Node2D"]
+offset_left = 191.0
+offset_top = 131.0
+offset_right = 580.0
+offset_bottom = 521.0
+icon = ExtResource("2_t58g0")
+metadata/_edit_use_anchors_ = true
+
+[node name="music" type="AudioStreamPlayer2D" parent="Node2D"]
+position = Vector2(380, 352)
+scale = Vector2(1.94619, 1.87958)
+stream = ExtResource("4_pvtdv")
+
+[connection signal="pressed" from="Node2D/Button" to="Node2D" method="_on_button_pressed"]

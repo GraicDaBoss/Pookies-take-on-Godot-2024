@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://csynkerd71ocq"]
+
+[ext_resource type="Texture2D" uid="uid://3mvfynd043fa" path="res://icon.svg" id="1_ga6md"]
+[ext_resource type="Script" path="res://tinkering.gd" id="2_a6ceg"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(559, 329)
+scale = Vector2(0.609375, 0.585938)
+texture = ExtResource("1_ga6md")
+script = ExtResource("2_a6ceg")
