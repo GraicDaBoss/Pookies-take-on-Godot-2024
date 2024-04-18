@@ -59,6 +59,7 @@ layout_mode = 2
 max_value = 1.0
 step = 0.001
 script = ExtResource("1_d4007")
+bus_name = "Master"
 
 [node name="Node2D" type="Node2D" parent="."]
 script = ExtResource("3_ekmnc")

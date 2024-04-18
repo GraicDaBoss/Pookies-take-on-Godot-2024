@@ -5,4 +5,6 @@ func _ready():
 	var viewport_size = get_viewport_rect().size
 	
 	# Set the position of the object to the center of the screen
-	position = viewport_size / 2
+	var middle = viewport_size / 2
+	
+	
