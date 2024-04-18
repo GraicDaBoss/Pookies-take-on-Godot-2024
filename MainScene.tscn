@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/HSlider.gd" id="1_d4007"]
 [ext_resource type="Texture2D" uid="uid://chhmarseej06m" path="res://button .jpg" id="2_t58g0"]
 [ext_resource type="Script" path="res://Scripts/SoundClick.gd" id="3_ekmnc"]
-[ext_resource type="AudioStream" uid="uid://cn6jibcc0boi3" path="res://light-switch-button-gentle-betacut-1-00-00.mp3" id="4_pvtdv"]
+[ext_resource type="AudioStream" uid="uid://ca31up0majo2y" path="res://Scripts/boing-6222.mp3" id="4_n3jma"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_772ja"]
 blend_mode = 1
@@ -74,6 +74,6 @@ metadata/_edit_use_anchors_ = true
 [node name="music" type="AudioStreamPlayer2D" parent="Node2D"]
 position = Vector2(380, 352)
 scale = Vector2(1.94619, 1.87958)
-stream = ExtResource("4_pvtdv")
+stream = ExtResource("4_n3jma")
 
 [connection signal="pressed" from="Node2D/Button" to="Node2D" method="_on_button_pressed"]
