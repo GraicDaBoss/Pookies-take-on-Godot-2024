@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://cdh6m8mhp2q6x"]
+
+[ext_resource type="Script" path="res://izzyscene.gd" id="1_bmrai"]
+[ext_resource type="Theme" uid="uid://cu23yfkeqwj2c" path="res://izzyscene.tres" id="2_1vndk"]
+[ext_resource type="AudioStream" uid="uid://2y6a0nejed2g" path="res://Audio/732291__ssud_motion__kk_kalimba_chord3.wav" id="2_kf2kd"]
+[ext_resource type="AudioStream" uid="uid://br863515a8so0" path="res://Audio/726543__hillsideflashes__g_arpkalimba_01.wav" id="4_5081m"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_bmrai")
+
+[node name="Button" type="Button" parent="."]
+offset_right = 297.0
+offset_bottom = 91.0
+theme = ExtResource("2_1vndk")
+text = "kalimba"
+
+[node name="Hitsound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_kf2kd")
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 2.0
+offset_top = 98.0
+offset_right = 298.0
+offset_bottom = 189.0
+theme = ExtResource("2_1vndk")
+text = "magic"
+
+[node name="magic" type="AudioStreamPlayer2D" parent="Button2"]
+stream = ExtResource("4_5081m")
+
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
