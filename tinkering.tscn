@@ -1,12 +1,26 @@
-[gd_scene load_steps=3 format=3 uid="uid://csynkerd71ocq"]
+[gd_scene load_steps=5 format=3 uid="uid://csynkerd71ocq"]
 
+[ext_resource type="Texture2D" uid="uid://dch2e3pbx3ib8" path="res://grid.jpg" id="1_51cwk"]
 [ext_resource type="Texture2D" uid="uid://3mvfynd043fa" path="res://icon.svg" id="1_ga6md"]
 [ext_resource type="Script" path="res://tinkering.gd" id="2_a6ceg"]
+[ext_resource type="Script" path="res://GridScript.gd" id="2_twaxy"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(283, 319)
+position = Vector2(592, 301)
 scale = Vector2(0.609375, 0.585938)
 texture = ExtResource("1_ga6md")
 script = ExtResource("2_a6ceg")
+
+[node name="Control" type="Control" parent="Icon"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Grid" type="Sprite2D" parent="Icon/Control"]
+position = Vector2(9.84613, -17.0667)
+scale = Vector2(4.77607, 4.00448)
+texture = ExtResource("1_51cwk")
+script = ExtResource("2_twaxy")
