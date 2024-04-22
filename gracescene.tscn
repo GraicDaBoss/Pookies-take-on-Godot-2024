@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://cuyadid4uvhrd"]
+
+[ext_resource type="Script" path="res://Scripts/SoundClick.gd" id="1_jeojl"]
+[ext_resource type="Texture2D" uid="uid://chhmarseej06m" path="res://button .jpg" id="2_w2ld6"]
+[ext_resource type="AudioStream" uid="uid://crkme3qodeqxn" path="res://Stuck.mp3" id="3_4av58"]
+[ext_resource type="Script" path="res://pitch.gd" id="4_wgqm7"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Node2D2" type="Node2D" parent="."]
+
+[node name="OptionButton" type="OptionButton" parent="Node2D2"]
+offset_left = 366.0
+offset_top = 45.0
+offset_right = 421.0
+offset_bottom = 76.0
+scale = Vector2(6.91207, 2.00089)
+pivot_offset = Vector2(61, 36)
+item_count = 3
+popup/item_0/text = "One"
+popup/item_0/id = 0
+popup/item_1/text = "Two"
+popup/item_1/id = 1
+popup/item_2/text = "Three"
+popup/item_2/id = 2
+script = ExtResource("4_wgqm7")
+
+[node name="music" type="Node2D" parent="Node2D2/OptionButton"]
+position = Vector2(-0.775996, -4.48198)
+scale = Vector2(0.144674, 0.499778)
+script = ExtResource("1_jeojl")
+
+[node name="Button" type="Button" parent="Node2D2/OptionButton/music"]
+offset_left = 191.0
+offset_top = 131.0
+offset_right = 580.0
+offset_bottom = 521.0
+icon = ExtResource("2_w2ld6")
+metadata/_edit_use_anchors_ = true
+
+[node name="music" type="AudioStreamPlayer2D" parent="Node2D2/OptionButton/music"]
+position = Vector2(380, 352)
+scale = Vector2(1.94619, 1.87958)
+stream = ExtResource("3_4av58")
+
+[connection signal="item_selected" from="Node2D2/OptionButton" to="Node2D2/OptionButton" method="_on_item_selected"]
+[connection signal="pressed" from="Node2D2/OptionButton/music/Button" to="Node2D2/OptionButton/music" method="_on_button_pressed"]

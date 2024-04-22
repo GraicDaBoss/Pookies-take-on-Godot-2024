@@ -5,3 +5,6 @@ extends Node2D
 
 func _on_button_pressed():
 	$music.play() # Replace with function body.
+
+#func _on_button2_pressed():
+	#$whatever.play()
