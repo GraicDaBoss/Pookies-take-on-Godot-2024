@@ -1,14 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://csynkerd71ocq"]
+[gd_scene load_steps=8 format=3 uid="uid://csynkerd71ocq"]
 
 [ext_resource type="Texture2D" uid="uid://dch2e3pbx3ib8" path="res://grid.jpg" id="1_51cwk"]
+[ext_resource type="Script" path="res://MapAudioController.gd" id="1_fvjvb"]
 [ext_resource type="Texture2D" uid="uid://3mvfynd043fa" path="res://icon.svg" id="1_ga6md"]
 [ext_resource type="Script" path="res://GridScript.gd" id="2_twaxy"]
 [ext_resource type="Script" path="res://DraggingScript.gd" id="4_j8ttn"]
+[ext_resource type="AudioStream" uid="uid://ca31up0majo2y" path="res://Scripts/boing-6222.mp3" id="6_4gimj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jv24h"]
 size = Vector2(88, 90.5)
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_fvjvb")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -35,5 +38,8 @@ texture = ExtResource("1_ga6md")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_jv24h")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_4gimj")
 
 [connection signal="input_event" from="Area2D" to="Area2D" method="_on_Draggable_input_event"]

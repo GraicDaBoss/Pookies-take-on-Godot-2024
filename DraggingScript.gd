@@ -1,9 +1,5 @@
 extends Area2D
-
-"""
-When clicked on,
-can be moved around the screen
-"""
+#Sarah code
 
 var previous_mouse_position = Vector2()
 var is_dragging = false
@@ -13,7 +9,6 @@ func _ready():
 	
 	# Set the position of the object to the center of the screen
 	position = viewport_size / 2
-
 
 func _on_Draggable_input_event(viewport, event, shape_idx):
 	
@@ -26,7 +21,6 @@ func _on_Draggable_input_event(viewport, event, shape_idx):
 		print(event)
 		previous_mouse_position = event.position
 		is_dragging = true
-
 
 func _input(event):
 	
@@ -50,5 +44,12 @@ func _input(event):
 	if is_dragging and event is InputEventMouseMotion:
 		position += event.position - previous_mouse_position
 		previous_mouse_position = event.position
+		emit_signal("position_changed", position)
 
-
+func _process(delta):
+	"""x axis"""
+	
+	#find x position
+	#
+	
+	"""y axis"""
