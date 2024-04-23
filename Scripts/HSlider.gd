@@ -1,6 +1,8 @@
 extends HSlider
+#sarahs code :)
 
 @export
+#Volume Slider
 
 var bus_name: String 
 
@@ -13,7 +15,7 @@ func _ready() -> void:
 	value = db_to_linear(
 		AudioServer.get_bus_volume_db(bus_index)
 	)
-	
+
 func _on_value_changed(value: float) -> void:
 	AudioServer.set_bus_volume_db(
 		bus_index,
