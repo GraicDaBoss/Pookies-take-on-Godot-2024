@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://cdh6m8mhp2q6x"]
+[gd_scene load_steps=9 format=3 uid="uid://cdh6m8mhp2q6x"]
 
 [ext_resource type="Script" path="res://izzyscene.gd" id="1_bmrai"]
 [ext_resource type="Theme" uid="uid://cu23yfkeqwj2c" path="res://izzyscene.tres" id="2_1vndk"]
 [ext_resource type="AudioStream" uid="uid://2y6a0nejed2g" path="res://Audio/732291__ssud_motion__kk_kalimba_chord3.wav" id="2_kf2kd"]
 [ext_resource type="AudioStream" uid="uid://br863515a8so0" path="res://Audio/726543__hillsideflashes__g_arpkalimba_01.wav" id="4_5081m"]
+[ext_resource type="AudioStream" uid="uid://dqx2imfpta2w8" path="res://Audio/537519__a_curious_coder__kalimba-scale-descending (1).wav" id="5_t2sap"]
+[ext_resource type="AudioStream" uid="uid://c3q8dydgak2hv" path="res://Audio/399194__spiceprogram__plastic-kalimba.wav" id="6_ohfld"]
+[ext_resource type="AudioStream" uid="uid://c5cxq74rr33ve" path="res://Audio/542318__tetoszka__kalimba-simple-effect.wav" id="7_kxhj3"]
+[ext_resource type="AudioStream" uid="uid://b405p658vf8ga" path="res://Audio/683952__eqavox__kalimba-notes.wav" id="8_wgutk"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_bmrai")
@@ -18,15 +22,62 @@ text = "kalimba"
 stream = ExtResource("2_kf2kd")
 
 [node name="Button2" type="Button" parent="."]
-offset_left = 2.0
-offset_top = 98.0
-offset_right = 298.0
-offset_bottom = 189.0
+offset_top = 105.0
+offset_right = 296.0
+offset_bottom = 196.0
 theme = ExtResource("2_1vndk")
 text = "magic"
 
 [node name="magic" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_5081m")
 
+[node name="Button3" type="Button" parent="."]
+offset_left = 1.0
+offset_top = 212.0
+offset_right = 298.0
+offset_bottom = 303.0
+theme = ExtResource("2_1vndk")
+text = "scale"
+
+[node name="scale" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_t2sap")
+
+[node name="Button4" type="Button" parent="."]
+offset_top = 317.0
+offset_right = 300.0
+offset_bottom = 415.0
+theme = ExtResource("2_1vndk")
+text = "plastic
+"
+
+[node name="plastic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_ohfld")
+
+[node name="Button5" type="Button" parent="."]
+offset_left = -2.0
+offset_top = 430.0
+offset_right = 300.0
+offset_bottom = 522.0
+theme = ExtResource("2_1vndk")
+text = "whimsy"
+
+[node name="whimsy" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_kxhj3")
+
+[node name="Button6" type="Button" parent="."]
+offset_left = 2.0
+offset_top = 538.0
+offset_right = 301.0
+offset_bottom = 630.0
+theme = ExtResource("2_1vndk")
+text = "sleepy"
+
+[node name="sleepy" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_wgutk")
+
 [connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="Button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="Button6" to="." method="_on_button_6_pressed"]
