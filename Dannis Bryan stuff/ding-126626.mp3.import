@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://6lahilgt5w66"
+path="res://.godot/imported/ding-126626.mp3-dfb5c5e102cd39f825abcc99e5ea6ab6.mp3str"
+
+[deps]
+
+source_file="res://Dannis Bryan stuff/ding-126626.mp3"
+dest_files=["res://.godot/imported/ding-126626.mp3-dfb5c5e102cd39f825abcc99e5ea6ab6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

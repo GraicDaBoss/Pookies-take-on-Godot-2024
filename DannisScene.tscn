@@ -1,8 +1,7 @@
-[gd_scene load_steps=17 format=3 uid="uid://yrdti7nuiwa0"]
+[gd_scene load_steps=18 format=3 uid="uid://yrdti7nuiwa0"]
 
 [ext_resource type="Script" path="res://DannisScene.gd" id="1_gpet6"]
 [ext_resource type="Texture2D" uid="uid://y5ff1ay0rj0" path="res://Dannis Bryan stuff/pngimg.com - sun_PNG13434.png" id="2_1vpop"]
-[ext_resource type="AudioStream" uid="uid://bwralve2im37b" path="res://Dannis Bryan stuff/wind-chimes.wav" id="2_lknut"]
 [ext_resource type="AudioStream" uid="uid://d4ybyuvtd3wu" path="res://Dannis Bryan stuff/do.wav" id="2_oy3ps"]
 [ext_resource type="AudioStream" uid="uid://byj3bei2kd2i0" path="res://Dannis Bryan stuff/fa.wav" id="3_7whsi"]
 [ext_resource type="Texture2D" uid="uid://bbpyeghuobdhd" path="res://Dannis Bryan stuff/Earth_Western_Hemisphere_transparent_background.png" id="3_dyt4g"]
@@ -12,6 +11,8 @@
 [ext_resource type="AudioStream" uid="uid://cbca3q6ufg7fl" path="res://Dannis Bryan stuff/si.wav" id="6_0rj68"]
 [ext_resource type="Texture2D" uid="uid://dxk87bfgxivdj" path="res://Dannis Bryan stuff/png-clipart-mercury-blue-and-brown-planet.png" id="7_7d23s"]
 [ext_resource type="AudioStream" uid="uid://dkynp45dxdl8e" path="res://Dannis Bryan stuff/sol.wav" id="7_x3bp0"]
+[ext_resource type="AudioStream" uid="uid://6lahilgt5w66" path="res://Dannis Bryan stuff/ding-126626.mp3" id="8_6c312"]
+[ext_resource type="Texture2D" uid="uid://b15xvoc4otv7r" path="res://Dannis Bryan stuff/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3B4MTM2NjcxMC1pbWFnZS1rd3Z4eGVxcC5qcGc.webp" id="9_nbokl"]
 [ext_resource type="Texture2D" uid="uid://djm0ptcd0dkx7" path="res://Dannis Bryan stuff/png-transparent-venus-earth-planet-solar-system-venus-sphere-astronomical-object-uranus.png" id="12_2c0q8"]
 [ext_resource type="Texture2D" uid="uid://bylgpnxu6e5wh" path="res://Dannis Bryan stuff/185-1859728_drawn-planets-transparent-planet-mercury.png" id="14_48xvw"]
 [ext_resource type="Texture2D" uid="uid://5sijlrsrdhi2" path="res://Dannis Bryan stuff/Uranus2-transparent.png" id="15_gvmnq"]
@@ -45,9 +46,14 @@ stream = ExtResource("6_0rj68")
 stream = ExtResource("7_x3bp0")
 
 [node name="Soundboom7" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("2_lknut")
+stream = ExtResource("8_6c312")
 
 [node name="Node2D" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
+position = Vector2(584, 292)
+scale = Vector2(1.52861, 1.34642)
+texture = ExtResource("9_nbokl")
 
 [node name="Button" type="Button" parent="Node2D"]
 offset_left = 133.0
@@ -145,3 +151,4 @@ layout_mode = 2
 [connection signal="pressed" from="Node2D/Button6" to="." method="_on_button_6_pressed"]
 [connection signal="pressed" from="Node2D/Button7" to="." method="_on_button_7_pressed"]
 [connection signal="pressed" from="Node2D/Button8" to="." method="_on_button_8_pressed"]
+[connection signal="value_changed" from="VBoxContainer/HSlider" to="." method="_on_h_slider_value_changed"]
