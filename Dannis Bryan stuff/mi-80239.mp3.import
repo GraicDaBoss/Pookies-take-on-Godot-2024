@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cieh0qf65pgkp"
+path="res://.godot/imported/mi-80239.mp3-ac7755b140430c1d095bfacf852d4a08.mp3str"
+
+[deps]
+
+source_file="res://Dannis Bryan stuff/mi-80239.mp3"
+dest_files=["res://.godot/imported/mi-80239.mp3-ac7755b140430c1d095bfacf852d4a08.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

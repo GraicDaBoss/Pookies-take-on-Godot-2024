@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b2qvqv3qkveih"
+path="res://.godot/imported/la.wav-801524a5e74f3e435baa8d4df498b5e6.sample"
+
+[deps]
+
+source_file="res://Dannis Bryan stuff/la.wav"
+dest_files=["res://.godot/imported/la.wav-801524a5e74f3e435baa8d4df498b5e6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

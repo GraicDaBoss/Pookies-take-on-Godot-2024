@@ -1,4 +1,21 @@
-[gd_scene format=3 uid="uid://yrdti7nuiwa0"]
+[gd_scene load_steps=17 format=3 uid="uid://yrdti7nuiwa0"]
+
+[ext_resource type="Script" path="res://DannisScene.gd" id="1_gpet6"]
+[ext_resource type="Texture2D" uid="uid://y5ff1ay0rj0" path="res://Dannis Bryan stuff/pngimg.com - sun_PNG13434.png" id="2_1vpop"]
+[ext_resource type="AudioStream" uid="uid://bwralve2im37b" path="res://Dannis Bryan stuff/wind-chimes.wav" id="2_lknut"]
+[ext_resource type="AudioStream" uid="uid://d4ybyuvtd3wu" path="res://Dannis Bryan stuff/do.wav" id="2_oy3ps"]
+[ext_resource type="AudioStream" uid="uid://byj3bei2kd2i0" path="res://Dannis Bryan stuff/fa.wav" id="3_7whsi"]
+[ext_resource type="Texture2D" uid="uid://bbpyeghuobdhd" path="res://Dannis Bryan stuff/Earth_Western_Hemisphere_transparent_background.png" id="3_dyt4g"]
+[ext_resource type="AudioStream" uid="uid://dv251x0tdswe1" path="res://Dannis Bryan stuff/mi.wav" id="4_3qod6"]
+[ext_resource type="AudioStream" uid="uid://l6mh3klega51" path="res://Dannis Bryan stuff/re.wav" id="5_k5sp6"]
+[ext_resource type="Texture2D" uid="uid://yjx01os7d8au" path="res://Dannis Bryan stuff/Jupiter_(transparent).png" id="5_qcdt5"]
+[ext_resource type="AudioStream" uid="uid://cbca3q6ufg7fl" path="res://Dannis Bryan stuff/si.wav" id="6_0rj68"]
+[ext_resource type="Texture2D" uid="uid://dxk87bfgxivdj" path="res://Dannis Bryan stuff/png-clipart-mercury-blue-and-brown-planet.png" id="7_7d23s"]
+[ext_resource type="AudioStream" uid="uid://dkynp45dxdl8e" path="res://Dannis Bryan stuff/sol.wav" id="7_x3bp0"]
+[ext_resource type="Texture2D" uid="uid://djm0ptcd0dkx7" path="res://Dannis Bryan stuff/png-transparent-venus-earth-planet-solar-system-venus-sphere-astronomical-object-uranus.png" id="12_2c0q8"]
+[ext_resource type="Texture2D" uid="uid://bylgpnxu6e5wh" path="res://Dannis Bryan stuff/185-1859728_drawn-planets-transparent-planet-mercury.png" id="14_48xvw"]
+[ext_resource type="Texture2D" uid="uid://5sijlrsrdhi2" path="res://Dannis Bryan stuff/Uranus2-transparent.png" id="15_gvmnq"]
+[ext_resource type="Texture2D" uid="uid://dl07bcvttheye" path="res://Dannis Bryan stuff/Transparent_Neptune.png" id="16_sasne"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -7,9 +24,124 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_gpet6")
+
+[node name="Soundboom" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_oy3ps")
+
+[node name="Soundboom2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_7whsi")
+
+[node name="Soundboom3" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_3qod6")
+
+[node name="Soundboom4" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_k5sp6")
+
+[node name="Soundboom5" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_0rj68")
+
+[node name="Soundboom6" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_x3bp0")
+
+[node name="Soundboom7" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_lknut")
 
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="Button" type="Button" parent="Node2D"]
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 133.0
+offset_top = 292.0
+offset_right = 1341.0
+offset_bottom = 1500.0
+scale = Vector2(0.0603469, 0.0571358)
+icon = ExtResource("3_dyt4g")
+flat = true
+
+[node name="Button2" type="Button" parent="Node2D"]
+offset_left = 245.0
+offset_top = 129.0
+offset_right = 1032.0
+offset_bottom = 910.0
+scale = Vector2(0.160001, 0.16)
+icon = ExtResource("5_qcdt5")
+flat = true
+
+[node name="Button3" type="Button" parent="Node2D"]
+offset_left = 848.0
+offset_top = 292.0
+offset_right = 1880.0
+offset_bottom = 1324.0
+scale = Vector2(0.0710793, 0.0721067)
+icon = ExtResource("7_7d23s")
+flat = true
+
+[node name="Button4" type="Button" parent="Node2D"]
+offset_left = 247.0
+offset_top = 386.0
+offset_right = 4351.0
+offset_bottom = 4490.0
+scale = Vector2(0.0276327, 0.0292074)
+icon = ExtResource("12_2c0q8")
+flat = true
+
+[node name="Button5" type="Button" parent="Node2D"]
+offset_left = 436.0
+offset_top = 172.0
+offset_right = 876.0
+offset_bottom = 612.0
+scale = Vector2(0.714427, 0.699981)
+icon = ExtResource("2_1vpop")
+flat = true
+
+[node name="Button6" type="Button" parent="Node2D"]
+offset_left = 753.0
+offset_top = 493.0
+offset_right = 1397.0
+offset_bottom = 1138.0
+scale = Vector2(0.190547, 0.186648)
+icon = ExtResource("14_48xvw")
+flat = true
+
+[node name="Button7" type="Button" parent="Node2D"]
+offset_left = 410.0
+offset_top = 527.0
+offset_right = 1825.0
+offset_bottom = 1942.0
+scale = Vector2(0.0588522, 0.0587981)
+icon = ExtResource("15_gvmnq")
+flat = true
+
+[node name="Button8" type="Button" parent="Node2D"]
+offset_left = 782.0
+offset_top = 122.0
+offset_right = 1426.0
+offset_bottom = 767.0
+scale = Vector2(0.190547, 0.186648)
+icon = ExtResource("16_sasne")
+flat = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 322.0
+offset_top = 27.0
+offset_right = 903.0
+offset_bottom = 67.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Piss"
+horizontal_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer"]
+layout_mode = 2
+
+[connection signal="mouse_entered" from="Node2D/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="pressed" from="Node2D/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Node2D/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Node2D/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Node2D/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="Node2D/Button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="Node2D/Button6" to="." method="_on_button_6_pressed"]
+[connection signal="pressed" from="Node2D/Button7" to="." method="_on_button_7_pressed"]
+[connection signal="pressed" from="Node2D/Button8" to="." method="_on_button_8_pressed"]
