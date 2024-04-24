@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://d3nnch0clyexq" path="res://Graces Stuff/bomb.png" id="3_mh6fx"]
 [ext_resource type="Texture2D" uid="uid://24n45uequxl7" path="res://Graces Stuff/clock 1.png" id="5_5cl42"]
 [ext_resource type="AudioStream" uid="uid://dn75bsjce2wwk" path="res://Graces Stuff/Bomb Timer with Loud Explosion.mp3" id="5_bjljj"]
-[ext_resource type="Script" path="res://reverb.gd" id="5_nlh3r"]
+[ext_resource type="Script" path="res://Graces Stuff/reverb.gd" id="5_nlh3r"]
 [ext_resource type="Texture2D" uid="uid://ccjck23ameasl" path="res://Graces Stuff/health bar.png" id="6_fdklb"]
 [ext_resource type="AudioStream" uid="uid://coki12ak5aej1" path="res://Graces Stuff/Apple iphone  6 Original Ringtone Sound Effect.mp3" id="7_dmdet"]
 [ext_resource type="Texture2D" uid="uid://drd3us2bsrn78" path="res://Graces Stuff/skull.png" id="7_exs7d"]

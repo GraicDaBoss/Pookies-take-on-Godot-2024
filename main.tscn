@@ -3,7 +3,7 @@
 [ext_resource type="AudioStream" uid="uid://cn6jibcc0boi3" path="res://light-switch-button-gentle-betacut-1-00-00.mp3" id="1_gg6cb"]
 [ext_resource type="Script" path="res://Scripts/SoundClick.gd" id="2_cb5ic"]
 [ext_resource type="Texture2D" uid="uid://chhmarseej06m" path="res://Graces Stuff/button .jpg" id="2_f5cla"]
-[ext_resource type="Script" path="res://pitch.gd" id="4_kvgtu"]
+[ext_resource type="Script" path="res://Graces Stuff/pitch.gd" id="4_kvgtu"]
 
 [node name="Main" type="Node2D"]
 
