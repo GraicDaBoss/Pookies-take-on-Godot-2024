@@ -1,5 +1,5 @@
 extends CheckButton
-#grace
+#grace!!
 
 var delay : AudioEffectDelay
 
