@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cuyadid4uvhrd"]
+[gd_scene load_steps=5 format=3 uid="uid://cuyadid4uvhrd"]
 
 [ext_resource type="Script" path="res://Scripts/SoundClick.gd" id="1_jeojl"]
 [ext_resource type="AudioStream" uid="uid://crkme3qodeqxn" path="res://Stuck.mp3" id="3_4av58"]
+[ext_resource type="Texture2D" uid="uid://chhmarseej06m" path="res://button .jpg" id="3_v2sl3"]
 [ext_resource type="Script" path="res://DistortionSlider.gd" id="5_y1aej"]
 
 [node name="Main" type="Node2D"]
@@ -15,15 +16,17 @@ script = ExtResource("5_y1aej")
 script = ExtResource("1_jeojl")
 
 [node name="Button" type="Button" parent="Node2D"]
-offset_left = 110.0
-offset_top = 38.0
-offset_right = 152.0
-offset_bottom = 69.0
-scale = Vector2(6.2182, 3.34462)
-text = "yass"
+offset_left = 191.0
+offset_top = 131.0
+offset_right = 580.0
+offset_bottom = 521.0
+icon = ExtResource("3_v2sl3")
+metadata/_edit_use_anchors_ = true
 
 [node name="music" type="AudioStreamPlayer2D" parent="Node2D"]
+position = Vector2(380, 352)
+scale = Vector2(1.94619, 1.87958)
 stream = ExtResource("3_4av58")
 
 [connection signal="toggled" from="CheckButton" to="CheckButton" method="_on_toggled"]
-[connection signal="pressed" from="Node2D/Button" to="Node2D/Button" method="_on_pressed"]
+[connection signal="pressed" from="Node2D/Button" to="Node2D" method="_on_button_pressed"]
