@@ -1,16 +1,15 @@
 [gd_resource type="AudioBusLayout" load_steps=3 format=3 uid="uid://bchvwt8ibi2jn"]
 
-[sub_resource type="AudioEffectDistortion" id="AudioEffectDistortion_7v7h8"]
+[sub_resource type="AudioEffectDistortion" id="AudioEffectDistortion_ebiay"]
 resource_name = "Distortion"
-drive = 0.22
 
-[sub_resource type="AudioEffectPitchShift" id="AudioEffectPitchShift_mveha"]
+[sub_resource type="AudioEffectPitchShift" id="AudioEffectPitchShift_kn2i7"]
 resource_name = "PitchShift"
 
 [resource]
-bus/0/effect/0/effect = SubResource("AudioEffectDistortion_7v7h8")
+bus/0/effect/0/effect = SubResource("AudioEffectDistortion_ebiay")
 bus/0/effect/0/enabled = true
-bus/0/effect/1/effect = SubResource("AudioEffectPitchShift_mveha")
+bus/0/effect/1/effect = SubResource("AudioEffectPitchShift_kn2i7")
 bus/0/effect/1/enabled = true
 bus/1/name = &"Music"
 bus/1/solo = false
@@ -24,9 +23,3 @@ bus/2/mute = false
 bus/2/bypass_fx = false
 bus/2/volume_db = 0.0
 bus/2/send = &"Master"
-bus/3/name = &"Kalimba"
-bus/3/solo = false
-bus/3/mute = false
-bus/3/bypass_fx = false
-bus/3/volume_db = 0.0
-bus/3/send = &"Master"

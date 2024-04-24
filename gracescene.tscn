@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cuyadid4uvhrd"]
+[gd_scene load_steps=5 format=3 uid="uid://dbq5kqy80i1jy"]
 
 [ext_resource type="Script" path="res://Scripts/SoundClick.gd" id="1_jeojl"]
 [ext_resource type="AudioStream" uid="uid://crkme3qodeqxn" path="res://Stuck.mp3" id="3_4av58"]
