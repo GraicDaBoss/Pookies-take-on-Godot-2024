@@ -15,7 +15,7 @@ func _on_toggled(toggled_on):
 
 	if distortion_effect:
 		# Free the existing distortion effect instance
-		distortion_effect.free()
+		#distortion_effect.free()
 		
 		# If the CheckBox is checked, add the distortion effect with mode set to MODE_OVERDRIVE
 		if toggled_on:
