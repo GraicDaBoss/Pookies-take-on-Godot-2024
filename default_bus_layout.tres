@@ -1,11 +1,16 @@
-[gd_resource type="AudioBusLayout" load_steps=2 format=3 uid="uid://bchvwt8ibi2jn"]
+[gd_resource type="AudioBusLayout" load_steps=3 format=3 uid="uid://bchvwt8ibi2jn"]
 
-[sub_resource type="AudioEffectPitchShift" id="AudioEffectPitchShift_kn2i7"]
+[sub_resource type="AudioEffectPitchShift" id="AudioEffectPitchShift_mveha"]
 resource_name = "PitchShift"
 
+[sub_resource type="AudioEffectDistortion" id="AudioEffectDistortion_7v7h8"]
+resource_name = "Distortion"
+
 [resource]
-bus/0/effect/0/effect = SubResource("AudioEffectPitchShift_kn2i7")
+bus/0/effect/0/effect = SubResource("AudioEffectPitchShift_mveha")
 bus/0/effect/0/enabled = true
+bus/0/effect/1/effect = SubResource("AudioEffectDistortion_7v7h8")
+bus/0/effect/1/enabled = true
 bus/1/name = &"Music"
 bus/1/solo = false
 bus/1/mute = false
