@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cdh6m8mhp2q6x"]
+[gd_scene load_steps=10 format=3 uid="uid://cdh6m8mhp2q6x"]
 
 [ext_resource type="Script" path="res://izzyscene.gd" id="1_bmrai"]
 [ext_resource type="Theme" uid="uid://cu23yfkeqwj2c" path="res://izzyscene.tres" id="2_1vndk"]
@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://c3q8dydgak2hv" path="res://Audio/399194__spiceprogram__plastic-kalimba.wav" id="6_ohfld"]
 [ext_resource type="AudioStream" uid="uid://c5cxq74rr33ve" path="res://Audio/542318__tetoszka__kalimba-simple-effect.wav" id="7_kxhj3"]
 [ext_resource type="AudioStream" uid="uid://b405p658vf8ga" path="res://Audio/683952__eqavox__kalimba-notes.wav" id="8_wgutk"]
+[ext_resource type="Texture2D" uid="uid://b2mj7e1qxdn7g" path="res://Audio/tubbs.png" id="9_mlec8"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_bmrai")
@@ -74,6 +75,12 @@ text = "sleepy"
 
 [node name="sleepy" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_wgutk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(538, 355)
+scale = Vector2(4.53516, 4.69141)
+texture = ExtResource("9_mlec8")
 
 [connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
