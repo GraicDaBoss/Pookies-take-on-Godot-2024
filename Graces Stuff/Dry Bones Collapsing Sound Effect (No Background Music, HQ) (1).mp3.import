@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://370cua24e6qr"
+path="res://.godot/imported/Dry Bones Collapsing Sound Effect (No Background Music, HQ) (1).mp3-16004ebf01345b1e6b1da07e496491d2.mp3str"
+
+[deps]
+
+source_file="res://Graces Stuff/Dry Bones Collapsing Sound Effect (No Background Music, HQ) (1).mp3"
+dest_files=["res://.godot/imported/Dry Bones Collapsing Sound Effect (No Background Music, HQ) (1).mp3-16004ebf01345b1e6b1da07e496491d2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/HSlider.gd" id="1_d4007"]
 [ext_resource type="Script" path="res://Scripts/PitchSlider.gd" id="2_ni8is"]
-[ext_resource type="Texture2D" uid="uid://chhmarseej06m" path="res://button .jpg" id="2_t58g0"]
+[ext_resource type="Texture2D" uid="uid://chhmarseej06m" path="res://Graces Stuff/button .jpg" id="2_t58g0"]
 [ext_resource type="Script" path="res://Scripts/SoundClick.gd" id="3_ekmnc"]
 [ext_resource type="AudioStream" uid="uid://ca31up0majo2y" path="res://Scripts/boing-6222.mp3" id="4_n3jma"]
 

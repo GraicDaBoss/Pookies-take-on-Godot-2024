@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c6ll0vvurtmvw"
+path="res://.godot/imported/Dip da dee da dee dee doh doh cat.mp3-4d935184a1751a521c23e659f565201b.mp3str"
+
+[deps]
+
+source_file="res://Graces Stuff/Dip da dee da dee dee doh doh cat.mp3"
+dest_files=["res://.godot/imported/Dip da dee da dee dee doh doh cat.mp3-4d935184a1751a521c23e659f565201b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

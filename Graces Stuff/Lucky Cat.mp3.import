@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://2udj1cpf5v5e"
+path="res://.godot/imported/Lucky Cat.mp3-7aa5e0fd67c71861b8c700e00d8ebc4d.mp3str"
+
+[deps]
+
+source_file="res://Graces Stuff/Lucky Cat.mp3"
+dest_files=["res://.godot/imported/Lucky Cat.mp3-7aa5e0fd67c71861b8c700e00d8ebc4d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
