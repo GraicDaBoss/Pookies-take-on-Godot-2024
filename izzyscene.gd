@@ -31,3 +31,7 @@ func _on_button_5_pressed():
 func _on_button_6_pressed():
 	$sleepy.play()
 	pass # Replace with function body.
+
+
+func _on_h_slider_value_changed(value):
+	pass # Replace with function body.
