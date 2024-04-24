@@ -1,5 +1,5 @@
 extends Node
-#grace and sarah
+#grace and sarah help (smart girl)
 
 var distortion : AudioEffectDistortion
 
@@ -14,13 +14,6 @@ func _on_toggled(toggled_on):
 	var distortion_effect = AudioServer.get_bus_effect(bus_index, 1) 
 
 	if distortion_effect:
-<<<<<<< Updated upstream
-		# Free the existing distortion effect instance
-		#distortion_effect.free()
-=======
->>>>>>> Stashed changes
-		
-
 
 		if toggled_on:
 			distortion.mode = AudioEffectDistortion.MODE_OVERDRIVE
