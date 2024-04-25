@@ -1,6 +1,7 @@
-[gd_scene load_steps=29 format=3 uid="uid://csynkerd71ocq"]
+[gd_scene load_steps=41 format=3 uid="uid://csynkerd71ocq"]
 
 [ext_resource type="Texture2D" uid="uid://3mvfynd043fa" path="res://icon.svg" id="1_ga6md"]
+[ext_resource type="Texture2D" uid="uid://bsdl1njxl452l" path="res://Sarah Assets/Assets/Untitled-1.png" id="1_uaja8"]
 [ext_resource type="Script" path="res://Sarah Assets/Scripts/DraggingScript.gd" id="4_j8ttn"]
 [ext_resource type="AudioStream" uid="uid://b28wyh8qvuqpy" path="res://Sarah Assets/Sounds/Bird.mp3" id="5_wiwb1"]
 [ext_resource type="Script" path="res://Scripts/SoundClick.gd" id="6_1kmlp"]
@@ -21,10 +22,9 @@
 [ext_resource type="AudioStream" uid="uid://c5em517aq43lv" path="res://Sarah Assets/Sounds/leaves rustling - sound effect.mp3" id="13_4qsrb"]
 [ext_resource type="AudioStream" uid="uid://rkv8ixm83b" path="res://Sarah Assets/Sounds/Cat Meow - Minecraft Sound Effect (HD).mp3" id="14_eh28w"]
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_65s83"]
+[sub_resource type="CanvasTexture" id="CanvasTexture_nhtju"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cd0wy"]
-size = Vector2(6.21, 3.9)
+[sub_resource type="CanvasTexture" id="CanvasTexture_65s83"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_slfda"]
 
@@ -36,18 +36,56 @@ blend_mode = 1
 
 [sub_resource type="LabelSettings" id="LabelSettings_fn1g6"]
 font_size = 27
-outline_size = 2
-outline_color = Color(0.105882, 0, 0.65098, 1)
+font_color = Color(0.6, 0.298039, 0.329412, 1)
+outline_color = Color(0.333333, 0.14902, 0.188235, 1)
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_t0cde"]
 blend_mode = 1
 
 [sub_resource type="LabelSettings" id="LabelSettings_edf68"]
 font_size = 27
-outline_size = 2
+font_color = Color(0.619608, 0.333333, 0.360784, 1)
 outline_color = Color(0.105882, 0, 0.65098, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_ry0uk"]
+font_color = Color(0.160784, 0.282353, 0.054902, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h02o6"]
+bg_color = Color(0.4, 0.690196, 0.376471, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hlj66"]
+bg_color = Color(0.266667, 0.568627, 0.329412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hel4k"]
+bg_color = Color(0.145098, 0.411765, 0.192157, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bjlmr"]
+bg_color = Color(0.4, 0.690196, 0.376471, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hme1v"]
+bg_color = Color(0.266667, 0.568627, 0.329412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6pqtf"]
+bg_color = Color(0.145098, 0.411765, 0.192157, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c0nub"]
+bg_color = Color(0.4, 0.690196, 0.376471, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mfpu8"]
+bg_color = Color(0.788235, 0.619608, 0.611765, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ms1s1"]
+bg_color = Color(0.796078, 0.564706, 0.576471, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a7l8u"]
+bg_color = Color(0.666667, 0.301961, 0.301961, 1)
+
 [node name="Node2D" type="Node2D"]
+
+[node name="Untitled-1" type="Sprite2D" parent="."]
+position = Vector2(575, 271)
+scale = Vector2(0.616931, 0.542519)
+texture = ExtResource("1_uaja8")
 
 [node name="Node2D" type="Node2D" parent="."]
 script = ExtResource("6_1kmlp")
@@ -76,7 +114,7 @@ stream = ExtResource("6_uqdu8")
 bus = &"SarahBus"
 
 [node name="StepPlayer" type="AudioStreamPlayer2D" parent="Node2D" groups=["Audio"]]
-position = Vector2(-280, 348)
+position = Vector2(-284, 342)
 scale = Vector2(1.94619, 1.87958)
 stream = ExtResource("6_qhjxa")
 bus = &"SarahBus"
@@ -103,7 +141,7 @@ volume_db = 10.124
 position = Vector2(-280, 348)
 scale = Vector2(1.94619, 1.87958)
 stream = ExtResource("9_p82ld")
-volume_db = -0.92
+volume_db = -4.601
 
 [node name="Xylophone" type="AudioStreamPlayer2D" parent="Node2D" groups=["Audio"]]
 position = Vector2(-280, 348)
@@ -140,15 +178,27 @@ position = Vector2(302, 172)
 scale = Vector2(0.75, 0.75)
 disable_mode = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="Draggable Area"]
-position = Vector2(310.25, 196.25)
-scale = Vector2(621.5, 393.5)
+[node name="Sprite2D2" type="Sprite2D" parent="Draggable Area"]
+position = Vector2(-5.58331, 194.544)
+scale = Vector2(-10.1667, 413.845)
+texture = SubResource("CanvasTexture_nhtju")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Draggable Area"]
+position = Vector2(625.333, 195.557)
+scale = Vector2(-10.1667, 412.065)
 texture = SubResource("CanvasTexture_65s83")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Draggable Area"]
-position = Vector2(310.5, 196)
-scale = Vector2(100, 100)
-shape = SubResource("RectangleShape2D_cd0wy")
+[node name="Sprite2D4" type="Sprite2D" parent="Draggable Area"]
+position = Vector2(310.667, -5.33334)
+rotation = 1.5708
+scale = Vector2(-10.1667, 640.005)
+texture = SubResource("CanvasTexture_65s83")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Draggable Area"]
+position = Vector2(310.899, 396)
+rotation = 1.5708
+scale = Vector2(-10.1667, 639.691)
+texture = SubResource("CanvasTexture_65s83")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(539, 322)
@@ -195,7 +245,7 @@ scale = Vector2(1, 0.912)
 
 [node name="ColorRect" type="ColorRect" parent="Control/VolumeSlider"]
 layout_mode = 2
-color = Color(0.666667, 0.760784, 0.843137, 1)
+color = Color(0.788235, 0.619608, 0.611765, 1)
 
 [node name="VboxContents" type="VBoxContainer" parent="Control/VolumeSlider"]
 layout_mode = 2
@@ -227,7 +277,7 @@ scale = Vector2(1, 0.912)
 
 [node name="ColorRect" type="ColorRect" parent="Control/ReverbSlider"]
 layout_mode = 2
-color = Color(0.666667, 0.760784, 0.843137, 1)
+color = Color(0.788235, 0.619608, 0.611765, 1)
 
 [node name="VboxContents" type="VBoxContainer" parent="Control/ReverbSlider"]
 layout_mode = 2
@@ -251,15 +301,15 @@ bus_name = "Master"
 material = SubResource("CanvasItemMaterial_t0cde")
 layout_direction = 1
 layout_mode = 0
-offset_left = 824.0
-offset_top = 133.0
-offset_right = 950.0
-offset_bottom = 341.0
+offset_left = 829.0
+offset_top = 158.0
+offset_right = 955.0
+offset_bottom = 404.0
 scale = Vector2(2.071, 1.888)
 
 [node name="ColorRect" type="ColorRect" parent="Control/RainCheck"]
 layout_mode = 2
-color = Color(0.666667, 0.760784, 0.843137, 1)
+color = Color(0.792157, 0.862745, 0.803922, 1)
 
 [node name="VboxContents" type="VBoxContainer" parent="Control/RainCheck"]
 layout_mode = 2
@@ -269,6 +319,7 @@ size_flags_stretch_ratio = 0.0
 [node name="Label4" type="Label" parent="Control/RainCheck/VboxContents"]
 layout_mode = 2
 text = "      Volume      "
+label_settings = SubResource("LabelSettings_ry0uk")
 horizontal_alignment = 1
 
 [node name="BusSlider" type="HSlider" parent="Control/RainCheck/VboxContents"]
@@ -281,11 +332,15 @@ bus_name = "SarahBus"
 [node name="Label" type="Label" parent="Control/RainCheck/VboxContents"]
 layout_mode = 2
 text = "Rain"
+label_settings = SubResource("LabelSettings_ry0uk")
 horizontal_alignment = 1
 
 [node name="CheckButton" type="CheckButton" parent="Control/RainCheck/VboxContents"]
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_h02o6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hlj66")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_hel4k")
 alignment = 1
 icon_alignment = 1
 text_direction = 1
@@ -293,11 +348,15 @@ text_direction = 1
 [node name="Label2" type="Label" parent="Control/RainCheck/VboxContents"]
 layout_mode = 2
 text = "Birds"
+label_settings = SubResource("LabelSettings_ry0uk")
 horizontal_alignment = 1
 
 [node name="CheckButton2" type="CheckButton" parent="Control/RainCheck/VboxContents"]
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_h02o6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hlj66")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_hel4k")
 alignment = 1
 icon_alignment = 1
 text_direction = 1
@@ -306,11 +365,15 @@ text_direction = 1
 layout_mode = 2
 text = "Wind
 "
+label_settings = SubResource("LabelSettings_ry0uk")
 horizontal_alignment = 1
 
 [node name="CheckButton3" type="CheckButton" parent="Control/RainCheck/VboxContents"]
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_h02o6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hlj66")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_hel4k")
 alignment = 1
 icon_alignment = 1
 text_direction = 1
@@ -319,11 +382,15 @@ text_direction = 1
 layout_mode = 2
 text = "Steps
 "
+label_settings = SubResource("LabelSettings_ry0uk")
 horizontal_alignment = 1
 
 [node name="CheckButton4" type="CheckButton" parent="Control/RainCheck/VboxContents"]
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_h02o6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hlj66")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_hel4k")
 alignment = 1
 icon_alignment = 1
 text_direction = 1
@@ -332,15 +399,15 @@ text_direction = 1
 material = SubResource("CanvasItemMaterial_t0cde")
 layout_direction = 1
 layout_mode = 0
-offset_left = 97.0
-offset_top = 66.0
-offset_right = 198.0
-offset_bottom = 447.0
+offset_left = 80.0
+offset_top = 161.0
+offset_right = 181.0
+offset_bottom = 494.0
 scale = Vector2(1.5, 1.368)
 
 [node name="ColorRect" type="ColorRect" parent="Control/Buttons"]
 layout_mode = 2
-color = Color(0.666667, 0.760784, 0.843137, 1)
+color = Color(0.792157, 0.862745, 0.803922, 1)
 
 [node name="VboxContents" type="VBoxContainer" parent="Control/Buttons"]
 layout_mode = 2
@@ -350,10 +417,14 @@ size_flags_stretch_ratio = 0.0
 [node name="Label" type="Label" parent="Control/Buttons/VboxContents"]
 layout_mode = 2
 text = "Flute"
+label_settings = SubResource("LabelSettings_ry0uk")
 horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="Control/Buttons/VboxContents"]
 layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_bjlmr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hme1v")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6pqtf")
 text = "
 "
 metadata/_edit_use_anchors_ = true
@@ -361,10 +432,14 @@ metadata/_edit_use_anchors_ = true
 [node name="Label2" type="Label" parent="Control/Buttons/VboxContents"]
 layout_mode = 2
 text = "Xylophone"
+label_settings = SubResource("LabelSettings_ry0uk")
 horizontal_alignment = 1
 
 [node name="Button2" type="Button" parent="Control/Buttons/VboxContents"]
 layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_c0nub")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hme1v")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6pqtf")
 text = "
 "
 metadata/_edit_use_anchors_ = true
@@ -372,10 +447,14 @@ metadata/_edit_use_anchors_ = true
 [node name="Label3" type="Label" parent="Control/Buttons/VboxContents"]
 layout_mode = 2
 text = "Shaker"
+label_settings = SubResource("LabelSettings_ry0uk")
 horizontal_alignment = 1
 
 [node name="Button3" type="Button" parent="Control/Buttons/VboxContents"]
 layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_c0nub")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hme1v")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6pqtf")
 text = "
 "
 metadata/_edit_use_anchors_ = true
@@ -383,33 +462,45 @@ metadata/_edit_use_anchors_ = true
 [node name="Label4" type="Label" parent="Control/Buttons/VboxContents"]
 layout_mode = 2
 text = "Chime"
+label_settings = SubResource("LabelSettings_ry0uk")
 horizontal_alignment = 1
 
 [node name="Button4" type="Button" parent="Control/Buttons/VboxContents"]
 layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_c0nub")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hme1v")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6pqtf")
 text = "
 "
 metadata/_edit_use_anchors_ = true
 
 [node name="Label5" type="Label" parent="Control/Buttons/VboxContents"]
 layout_mode = 2
-text = "Birds"
+text = "Leaves"
+label_settings = SubResource("LabelSettings_ry0uk")
 horizontal_alignment = 1
 
 [node name="Button5" type="Button" parent="Control/Buttons/VboxContents"]
 layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_c0nub")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hme1v")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6pqtf")
 text = "
 "
 metadata/_edit_use_anchors_ = true
 
 [node name="Label6" type="Label" parent="Control/Buttons/VboxContents"]
 layout_mode = 2
-text = "Wind
+text = "Cat
 "
+label_settings = SubResource("LabelSettings_ry0uk")
 horizontal_alignment = 1
 
 [node name="Button6" type="Button" parent="Control/Buttons/VboxContents"]
 layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_c0nub")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hme1v")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6pqtf")
 text = "
 "
 metadata/_edit_use_anchors_ = true
@@ -432,17 +523,26 @@ layout_mode = 2
 
 [node name="Button4" type="Button" parent="Control/PanelContainer/HBoxContainer"]
 layout_mode = 2
-text = "                                   "
+theme_override_styles/normal = SubResource("StyleBoxFlat_mfpu8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ms1s1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_a7l8u")
+text = "                                     "
 metadata/_edit_use_anchors_ = true
 
 [node name="Button5" type="Button" parent="Control/PanelContainer/HBoxContainer"]
 layout_mode = 2
-text = "                                   "
+theme_override_styles/normal = SubResource("StyleBoxFlat_mfpu8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ms1s1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_a7l8u")
+text = "                                     "
 metadata/_edit_use_anchors_ = true
 
 [node name="Button6" type="Button" parent="Control/PanelContainer/HBoxContainer"]
 layout_mode = 2
-text = "                                   "
+theme_override_styles/normal = SubResource("StyleBoxFlat_mfpu8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ms1s1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_a7l8u")
+text = "                                     "
 metadata/_edit_use_anchors_ = true
 
 [connection signal="input_event" from="Area2D" to="Area2D" method="_on_Draggable_input_event"]
