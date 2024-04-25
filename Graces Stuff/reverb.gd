@@ -23,7 +23,7 @@ func _on_toggled(toggled_on):
 			delay.tap1_active = false
 
 
-		# Add the updated distortion effect to the master bus
+		
 		AudioServer.add_bus_effect(bus_index, delay)
 	else:
 		print("Distortion effect not found on the master bus.")

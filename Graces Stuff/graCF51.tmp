@@ -1,0 +1,289 @@
+[gd_scene load_steps=25 format=3 uid="uid://dbq5kqy80i1jy"]
+
+[ext_resource type="Texture2D" uid="uid://eky1pik3nrjn" path="res://Graces Stuff/bckg.jpg" id="1_caaj8"]
+[ext_resource type="Script" path="res://DistortionSlider.gd" id="1_cvv1m"]
+[ext_resource type="Script" path="res://Scripts/SoundClick.gd" id="2_8bfsu"]
+[ext_resource type="Texture2D" uid="uid://d3nnch0clyexq" path="res://Graces Stuff/bomb.png" id="3_mh6fx"]
+[ext_resource type="Texture2D" uid="uid://24n45uequxl7" path="res://Graces Stuff/clock 1.png" id="5_5cl42"]
+[ext_resource type="AudioStream" uid="uid://dn75bsjce2wwk" path="res://Graces Stuff/Bomb Timer with Loud Explosion.mp3" id="5_bjljj"]
+[ext_resource type="Script" path="res://Graces Stuff/reverb.gd" id="5_nlh3r"]
+[ext_resource type="Texture2D" uid="uid://ccjck23ameasl" path="res://Graces Stuff/health bar.png" id="6_fdklb"]
+[ext_resource type="AudioStream" uid="uid://coki12ak5aej1" path="res://Graces Stuff/Apple iphone  6 Original Ringtone Sound Effect.mp3" id="7_dmdet"]
+[ext_resource type="Texture2D" uid="uid://drd3us2bsrn78" path="res://Graces Stuff/skull.png" id="7_exs7d"]
+[ext_resource type="AudioStream" uid="uid://dmqmilp6m8py6" path="res://Graces Stuff/Heartbeat sound.mp3" id="8_a06tg"]
+[ext_resource type="Texture2D" uid="uid://bkylwth106xrm" path="res://Graces Stuff/trophy.png" id="8_u5ebn"]
+[ext_resource type="Texture2D" uid="uid://cmxiomw18eefu" path="res://Graces Stuff/emperor chicken.png" id="9_f7o8j"]
+[ext_resource type="AudioStream" uid="uid://c6ll0vvurtmvw" path="res://Graces Stuff/Dip da dee da dee dee doh doh cat.mp3" id="10_gp5l8"]
+[ext_resource type="AudioStream" uid="uid://370cua24e6qr" path="res://Graces Stuff/Dry Bones Collapsing Sound Effect (No Background Music, HQ) (1).mp3" id="12_37sba"]
+[ext_resource type="Texture2D" uid="uid://cheqgky1fa3sm" path="res://Graces Stuff/star.png" id="13_t7k11"]
+[ext_resource type="AudioStream" uid="uid://cwu1ctwiaqvum" path="res://Graces Stuff/Magical Twinkle Sound Effect (HD).mp3" id="14_xo277"]
+[ext_resource type="AudioStream" uid="uid://q6dksjcs1huw" path="res://Graces Stuff/Crowd Yay Sound Effect.mp3" id="16_tj8ot"]
+[ext_resource type="Script" path="res://Sarah Assets/Scripts/HSlider.gd" id="19_uxj8p"]
+[ext_resource type="Script" path="res://Sarah Assets/Scripts/PitchSlider.gd" id="20_hbwgu"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_726d3"]
+blend_mode = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_h2wet"]
+font_size = 27
+outline_size = 2
+outline_color = Color(0.105882, 0, 0.65098, 1)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_8gxfy"]
+blend_mode = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_7vdtw"]
+font_size = 27
+outline_size = 2
+outline_color = Color(0.105882, 0, 0.65098, 1)
+
+[node name="Main" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(566, 358)
+scale = Vector2(1.20808, 0.89398)
+texture = ExtResource("1_caaj8")
+
+[node name="CheckButton" type="CheckButton" parent="."]
+offset_left = -672.0
+offset_top = -156.0
+offset_right = -148.0
+offset_bottom = 197.0
+scale = Vector2(2.11676, 1.86555)
+script = ExtResource("1_cvv1m")
+
+[node name="Label" type="Label" parent="CheckButton"]
+layout_mode = 0
+offset_left = 408.171
+offset_top = 163.49
+offset_right = 486.171
+offset_bottom = 186.49
+text = "Distortion"
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(-824, 918)
+script = ExtResource("2_8bfsu")
+
+[node name="Button" type="Button" parent="Node2D"]
+offset_left = 937.0
+offset_top = -495.0
+offset_right = 1326.0
+offset_bottom = -105.0
+scale = Vector2(0.504164, 0.494221)
+icon = ExtResource("3_mh6fx")
+flat = true
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="music" type="AudioStreamPlayer2D" parent="Node2D"]
+position = Vector2(357, 378)
+scale = Vector2(1.94619, 1.87958)
+stream = ExtResource("5_bjljj")
+
+[node name="Node2D2" type="Node2D" parent="."]
+position = Vector2(286, 972)
+script = ExtResource("2_8bfsu")
+
+[node name="Button" type="Button" parent="Node2D2"]
+offset_left = 581.0
+offset_top = -531.0
+offset_right = 970.0
+offset_bottom = -141.0
+scale = Vector2(0.550448, 0.52787)
+icon = ExtResource("5_5cl42")
+flat = true
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="music" type="AudioStreamPlayer2D" parent="Node2D2"]
+position = Vector2(380, 352)
+scale = Vector2(1.94619, 1.87958)
+stream = ExtResource("7_dmdet")
+
+[node name="Node2D3" type="Node2D" parent="."]
+position = Vector2(952, 918)
+script = ExtResource("2_8bfsu")
+
+[node name="Button" type="Button" parent="Node2D3"]
+offset_left = -861.0
+offset_top = -663.0
+offset_right = -472.0
+offset_bottom = -273.0
+scale = Vector2(0.464322, 0.431224)
+icon = ExtResource("6_fdklb")
+flat = true
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="music" type="AudioStreamPlayer2D" parent="Node2D3"]
+position = Vector2(380, 352)
+scale = Vector2(1.94619, 1.87958)
+stream = ExtResource("8_a06tg")
+
+[node name="Node2D4" type="Node2D" parent="."]
+position = Vector2(1541, 498)
+script = ExtResource("2_8bfsu")
+
+[node name="Button" type="Button" parent="Node2D4"]
+offset_left = -1124.0
+offset_top = -267.0
+offset_right = -735.0
+offset_bottom = 123.0
+scale = Vector2(0.726952, 0.752152)
+icon = ExtResource("9_f7o8j")
+flat = true
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="music" type="AudioStreamPlayer2D" parent="Node2D4"]
+position = Vector2(380, 352)
+scale = Vector2(1.94619, 1.87958)
+stream = ExtResource("10_gp5l8")
+
+[node name="Node2D5" type="Node2D" parent="."]
+position = Vector2(1274, -130)
+script = ExtResource("2_8bfsu")
+
+[node name="Button" type="Button" parent="Node2D5"]
+offset_left = -408.0
+offset_top = 371.0
+offset_right = -19.0
+offset_bottom = 761.0
+scale = Vector2(0.513277, 0.508718)
+icon = ExtResource("7_exs7d")
+flat = true
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="music" type="AudioStreamPlayer2D" parent="Node2D5"]
+position = Vector2(380, 352)
+scale = Vector2(1.94619, 1.87958)
+stream = ExtResource("12_37sba")
+
+[node name="Node2D6" type="Node2D" parent="."]
+position = Vector2(-356, -448)
+script = ExtResource("2_8bfsu")
+
+[node name="Button" type="Button" parent="Node2D6"]
+offset_left = 1248.0
+offset_top = 458.0
+offset_right = 1637.0
+offset_bottom = 848.0
+scale = Vector2(0.432163, 0.49316)
+icon = ExtResource("13_t7k11")
+flat = true
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="music" type="AudioStreamPlayer2D" parent="Node2D6"]
+position = Vector2(380, 352)
+scale = Vector2(1.94619, 1.87958)
+stream = ExtResource("14_xo277")
+
+[node name="Node2D7" type="Node2D" parent="."]
+position = Vector2(-438, -320)
+script = ExtResource("2_8bfsu")
+
+[node name="Button" type="Button" parent="Node2D7"]
+offset_left = 495.0
+offset_top = 354.0
+offset_right = 884.0
+offset_bottom = 744.0
+scale = Vector2(0.524162, 0.502332)
+icon = ExtResource("8_u5ebn")
+flat = true
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="music" type="AudioStreamPlayer2D" parent="Node2D7"]
+position = Vector2(380, 352)
+scale = Vector2(1.94619, 1.87958)
+stream = ExtResource("16_tj8ot")
+
+[node name="CheckButton2" type="CheckButton" parent="."]
+offset_left = 619.0
+offset_top = 147.0
+offset_right = 745.0
+offset_bottom = 178.0
+scale = Vector2(2.00073, 1.84019)
+text = "Echo"
+alignment = 2
+script = ExtResource("5_nlh3r")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+material = SubResource("CanvasItemMaterial_726d3")
+layout_direction = 1
+offset_left = 284.0
+offset_top = 3.0
+offset_right = 517.0
+offset_bottom = 80.0
+
+[node name="ColorRect" type="ColorRect" parent="PanelContainer"]
+visible = false
+layout_mode = 2
+color = Color(0.666667, 0.760784, 0.843137, 1)
+
+[node name="VboxContents" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_stretch_ratio = 0.0
+
+[node name="Label" type="Label" parent="PanelContainer/VboxContents"]
+layout_mode = 2
+text = "Master Volume"
+label_settings = SubResource("LabelSettings_h2wet")
+horizontal_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="PanelContainer/VboxContents"]
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+script = ExtResource("19_uxj8p")
+bus_name = "Master"
+
+[node name="PanelContainer2" type="PanelContainer" parent="."]
+material = SubResource("CanvasItemMaterial_8gxfy")
+layout_direction = 1
+offset_left = 634.0
+offset_top = -1.0
+offset_right = 867.0
+offset_bottom = 76.0
+
+[node name="ColorRect" type="ColorRect" parent="PanelContainer2"]
+visible = false
+layout_mode = 2
+color = Color(0.666667, 0.760784, 0.843137, 1)
+
+[node name="VboxContents" type="VBoxContainer" parent="PanelContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_stretch_ratio = 0.0
+
+[node name="Label" type="Label" parent="PanelContainer2/VboxContents"]
+layout_mode = 2
+text = "   Pitch Shifter   "
+label_settings = SubResource("LabelSettings_7vdtw")
+horizontal_alignment = 1
+
+[node name="PitchSlider" type="HSlider" parent="PanelContainer2/VboxContents"]
+layout_mode = 2
+max_value = 2.0
+step = 0.001
+script = ExtResource("20_hbwgu")
+bus_name = "Master"
+
+[connection signal="toggled" from="CheckButton" to="CheckButton" method="_on_toggled"]
+[connection signal="pressed" from="Node2D/Button" to="Node2D" method="_on_button_pressed"]
+[connection signal="pressed" from="Node2D2/Button" to="Node2D2" method="_on_button_pressed"]
+[connection signal="pressed" from="Node2D3/Button" to="Node2D3" method="_on_button_pressed"]
+[connection signal="pressed" from="Node2D4/Button" to="Node2D4" method="_on_button_pressed"]
+[connection signal="pressed" from="Node2D5/Button" to="Node2D5" method="_on_button_pressed"]
+[connection signal="pressed" from="Node2D6/Button" to="Node2D6" method="_on_button_pressed"]
+[connection signal="pressed" from="Node2D7/Button" to="Node2D7" method="_on_button_pressed"]
+[connection signal="toggled" from="CheckButton2" to="CheckButton2" method="_on_toggled"]

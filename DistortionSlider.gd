@@ -4,7 +4,7 @@ extends Node
 var distortion : AudioEffectDistortion
 
 func _ready():
-	distortion = preload("res://default_bus_layout.tres::AudioEffectDistortion_ebiay")
+	distortion = preload("res://default_bus_layout.tres::AudioEffectDistortion_s31m6")
 
 func _on_toggled(toggled_on):
 	

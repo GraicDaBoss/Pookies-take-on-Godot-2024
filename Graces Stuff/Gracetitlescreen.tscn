@@ -41,7 +41,7 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[connection signal="pressed" from="Control/StartButton" to="Control" method="_on_start_button_2_pressed"]
 [connection signal="pressed" from="Control/StartButton" to="Control" method="_on_start_button_pressed"]
-[connection signal="pressed" from="Control/QuitButton" to="Control" method="_on_quit_button_2_pressed"]
+[connection signal="pressed" from="Control/StartButton" to="Control" method="_on_start_button_2_pressed"]
 [connection signal="pressed" from="Control/QuitButton" to="Control" method="_on_quit_button_pressed"]
+[connection signal="pressed" from="Control/QuitButton" to="Control" method="_on_quit_button_2_pressed"]
