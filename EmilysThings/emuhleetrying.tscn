@@ -1,10 +1,21 @@
-[gd_scene load_steps=7 format=3 uid="uid://cgi5pbt0xkysa"]
+[gd_scene load_steps=18 format=3 uid="uid://cgi5pbt0xkysa"]
 
 [ext_resource type="Texture2D" uid="uid://civsdpqp0dtxu" path="res://EmilysThings/wahoo.jpg" id="1_bvxq0"]
 [ext_resource type="Texture2D" uid="uid://bjmy82jgxadfv" path="res://EmilysThings/birdlampa.png" id="2_0qh3y"]
 [ext_resource type="Script" path="res://EmilysThings/birdsound.gd" id="2_d38l3"]
 [ext_resource type="AudioStream" uid="uid://b6dcjotir3qt" path="res://EmilysThings/birds.mp3" id="3_cegul"]
 [ext_resource type="Texture2D" uid="uid://62wo0t2gb7gk" path="res://EmilysThings/moonlamp.png" id="5_k5csd"]
+[ext_resource type="Script" path="res://EmilysThings/Node2D3.gd" id="5_srynf"]
+[ext_resource type="AudioStream" uid="uid://ca3mx2oihcoql" path="res://EmilysThings/moonsong.mp3" id="7_0l1lc"]
+[ext_resource type="Script" path="res://EmilysThings/Node2D4.gd" id="8_drn4o"]
+[ext_resource type="Texture2D" uid="uid://ui8y0a0sfv7v" path="res://EmilysThings/sticklamp.png" id="9_sndl0"]
+[ext_resource type="AudioStream" uid="uid://n6algsu8b7oa" path="res://EmilysThings/blip.mp3" id="10_83t2i"]
+[ext_resource type="Script" path="res://EmilysThings/Node2D5.gd" id="11_gtpsy"]
+[ext_resource type="Texture2D" uid="uid://bchn8hke15is6" path="res://EmilysThings/swirlslamp.png" id="12_7brel"]
+[ext_resource type="AudioStream" uid="uid://cgyh44wa2cdyf" path="res://EmilysThings/wind.mp3" id="13_x00ei"]
+[ext_resource type="Script" path="res://EmilysThings/Node2D6.gd" id="14_7b7wp"]
+[ext_resource type="Texture2D" uid="uid://mfebl732eq2r" path="res://EmilysThings/bluelamp.png" id="15_yf48i"]
+[ext_resource type="AudioStream" uid="uid://l6yovraxig8m" path="res://EmilysThings/dreamy.mp3" id="16_5rfox"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_x2tsy"]
 
@@ -38,6 +49,7 @@ flat = true
 stream = ExtResource("3_cegul")
 
 [node name="Node2D3" type="Node2D" parent="."]
+script = ExtResource("5_srynf")
 
 [node name="Button" type="Button" parent="Node2D3"]
 offset_left = 748.0
@@ -47,4 +59,54 @@ offset_bottom = 260.0
 icon = ExtResource("5_k5csd")
 flat = true
 
+[node name="moon" type="AudioStreamPlayer" parent="Node2D3"]
+stream = ExtResource("7_0l1lc")
+
+[node name="Node2D4" type="Node2D" parent="."]
+script = ExtResource("8_drn4o")
+
+[node name="Button" type="Button" parent="Node2D4"]
+offset_left = 531.0
+offset_top = 114.0
+offset_right = 739.0
+offset_bottom = 272.0
+icon = ExtResource("9_sndl0")
+flat = true
+
+[node name="blip" type="AudioStreamPlayer2D" parent="Node2D4"]
+stream = ExtResource("10_83t2i")
+
+[node name="Node2D5" type="Node2D" parent="."]
+script = ExtResource("11_gtpsy")
+
+[node name="Button" type="Button" parent="Node2D5"]
+offset_left = 511.0
+offset_top = 383.0
+offset_right = 719.0
+offset_bottom = 541.0
+icon = ExtResource("12_7brel")
+flat = true
+
+[node name="wind" type="AudioStreamPlayer2D" parent="Node2D5"]
+stream = ExtResource("13_x00ei")
+
+[node name="Node2D6" type="Node2D" parent="."]
+script = ExtResource("14_7b7wp")
+
+[node name="Button" type="Button" parent="Node2D6"]
+offset_left = 729.0
+offset_top = 341.0
+offset_right = 1017.0
+offset_bottom = 544.0
+icon = ExtResource("15_yf48i")
+flat = true
+expand_icon = true
+
+[node name="dreamy" type="AudioStreamPlayer2D" parent="Node2D6"]
+stream = ExtResource("16_5rfox")
+
 [connection signal="mouse_entered" from="Node2D2/Button" to="Node2D2" method="_on_button_mouse_entered"]
+[connection signal="mouse_entered" from="Node2D3/Button" to="Node2D3" method="_on_button_mouse_entered"]
+[connection signal="mouse_entered" from="Node2D4/Button" to="Node2D4" method="_on_button_mouse_entered"]
+[connection signal="mouse_entered" from="Node2D5/Button" to="Node2D5" method="_on_button_mouse_entered"]
+[connection signal="mouse_entered" from="Node2D6/Button" to="Node2D6" method="_on_button_mouse_entered"]
