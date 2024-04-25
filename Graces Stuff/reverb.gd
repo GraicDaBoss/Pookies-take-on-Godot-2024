@@ -4,7 +4,7 @@ extends CheckButton
 var delay : AudioEffectDelay
 
 func _ready():
-	delay = preload("res://default_bus_layout.tres::AudioEffectDelay_r7t2f")
+	delay = preload("res://default_bus_layout.tres::AudioEffectDelay_xwdm8")
 
 func _on_toggled(toggled_on):
 	

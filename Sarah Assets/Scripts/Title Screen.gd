@@ -2,7 +2,7 @@ extends Control
 
 var buttons = {
 	"SarahButton": "res://Sarah Assets/tinkering.tscn",
-	"grace": "res://Graces Stuff/Gracetitlescreen.tscn",
+	"GraceButton": "res://Gracetitlescreen.tscn",
 	"IzzyButton": "res://izzyscene.tscn",
 	"DanniButton": "res://DannisScene.tscn",
 	"EmilyButton": "res://emuhleetrying.tscn"

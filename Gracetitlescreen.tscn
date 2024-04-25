@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://12v22xns54y"]
 
-[ext_resource type="Script" path="res://Graces Stuff/Gracetitlescreen.gd" id="2_cpbo2"]
-[ext_resource type="Texture2D" uid="uid://eky1pik3nrjn" path="res://Graces Stuff/bckg.jpg" id="3_127wh"]
-[ext_resource type="Texture2D" uid="uid://cywhx5h74e72g" path="res://Graces Stuff/stvart.png" id="4_hbxh8"]
-[ext_resource type="Texture2D" uid="uid://bcdyd1rsf220n" path="res://Graces Stuff/quit.png" id="5_drm3v"]
+[ext_resource type="Script" path="res://Graces Stuff/Gracetitlescreen.gd" id="1_5ify7"]
+[ext_resource type="Texture2D" uid="uid://eky1pik3nrjn" path="res://Graces Stuff/bckg.jpg" id="2_hg061"]
+[ext_resource type="Texture2D" uid="uid://cywhx5h74e72g" path="res://Graces Stuff/stvart.png" id="3_48wpe"]
+[ext_resource type="Texture2D" uid="uid://bcdyd1rsf220n" path="res://Graces Stuff/quit.png" id="4_8agu1"]
 
 [node name="Gracetitlescreen" type="Node2D"]
 
@@ -12,12 +12,12 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("2_cpbo2")
+script = ExtResource("1_5ify7")
 
 [node name="Bckg" type="Sprite2D" parent="Control"]
 position = Vector2(566, 357)
 scale = Vector2(1.208, 1.208)
-texture = ExtResource("3_127wh")
+texture = ExtResource("2_hg061")
 
 [node name="StartButton" type="Button" parent="Control"]
 layout_mode = 0
@@ -25,7 +25,7 @@ offset_left = 449.0
 offset_top = 148.0
 offset_right = 701.0
 offset_bottom = 270.0
-icon = ExtResource("4_hbxh8")
+icon = ExtResource("3_48wpe")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -36,12 +36,12 @@ offset_left = 448.0
 offset_top = 388.0
 offset_right = 709.0
 offset_bottom = 485.0
-icon = ExtResource("5_drm3v")
+icon = ExtResource("4_8agu1")
 flat = true
 icon_alignment = 1
 expand_icon = true
 
-[connection signal="pressed" from="Control/StartButton" to="Control" method="_on_start_button_pressed"]
 [connection signal="pressed" from="Control/StartButton" to="Control" method="_on_start_button_2_pressed"]
+[connection signal="pressed" from="Control/StartButton" to="Control" method="_on_start_button_pressed"]
 [connection signal="pressed" from="Control/QuitButton" to="Control" method="_on_quit_button_pressed"]
 [connection signal="pressed" from="Control/QuitButton" to="Control" method="_on_quit_button_2_pressed"]
