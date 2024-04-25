@@ -8,7 +8,7 @@ func _ready():
 	# Find and store a reference to the audio player node
 	audio_player = get_node("path_to_your_audio_player_node")
 	# Connect the signal from the draggable sprite to the _on_position_changed function
-	get_parent().connect("position_changed", self, "_on_position_changed")
+	#get_parent().connect("position_changed", self, "_on_position_changed")
 
 func _on_position_changed(new_position: Vector2):
 	# Calculate the speed based on the position of the draggable sprite

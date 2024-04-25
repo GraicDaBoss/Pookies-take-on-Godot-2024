@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://diifqtn2af7ro"]
 
-[ext_resource type="Script" path="res://Scripts/Title Screen.gd" id="1_du4q0"]
+[ext_resource type="Script" path="res://Sarah Assets/Scripts/Title Screen.gd" id="1_du4q0"]
 
 [node name="Title Screen" type="Control"]
 layout_mode = 3
@@ -11,21 +11,61 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_du4q0")
 
-[node name="StartButton" type="Button" parent="."]
+[node name="SarahButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 495.0
-offset_top = 412.0
-offset_right = 627.0
-offset_bottom = 458.0
-text = "Start"
+offset_left = 403.0
+offset_top = 475.0
+offset_right = 535.0
+offset_bottom = 521.0
+text = "Sarah
+"
+
+[node name="GraceButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 922.0
+offset_top = 203.0
+offset_right = 1054.0
+offset_bottom = 249.0
+text = "Grace"
+
+[node name="Izzy Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1468.0
+offset_top = 408.0
+offset_right = 1600.0
+offset_bottom = 454.0
+text = "Izzy
+"
+
+[node name="DanniButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 549.0
+offset_top = 885.0
+offset_right = 681.0
+offset_bottom = 931.0
+text = "Danni
+"
+
+[node name="EmilyButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1472.0
+offset_top = 858.0
+offset_right = 1604.0
+offset_bottom = 904.0
+text = "Emily
+"
 
 [node name="QuitButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 498.0
-offset_top = 500.0
-offset_right = 630.0
-offset_bottom = 546.0
+offset_left = 920.0
+offset_top = 602.0
+offset_right = 1052.0
+offset_bottom = 648.0
 text = "Quit	"
 
-[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="SarahButton" to="." method="_on_button_pressed" binds= ["SarahButton"]]
+[connection signal="pressed" from="GraceButton" to="." method="_on_button_pressed" binds= ["GraceButton"]]
+[connection signal="pressed" from="Izzy Button" to="." method="_on_button_pressed" binds= ["IzzyButton"]]
+[connection signal="pressed" from="DanniButton" to="." method="_on_button_pressed" binds= ["DanniButton"]]
+[connection signal="pressed" from="EmilyButton" to="." method="_on_button_pressed" binds= ["EmilyButton"]]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

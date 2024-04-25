@@ -1,0 +1,200 @@
+[gd_scene load_steps=18 format=3 uid="uid://csynkerd71ocq"]
+
+[ext_resource type="Texture2D" uid="uid://3mvfynd043fa" path="res://icon.svg" id="1_ga6md"]
+[ext_resource type="Script" path="res://Sarah Assets/Scripts/DraggingScript.gd" id="4_j8ttn"]
+[ext_resource type="Script" path="res://Scripts/SoundClick.gd" id="6_1kmlp"]
+[ext_resource type="AudioStream" uid="uid://ca31up0majo2y" path="res://Scripts/boing-6222.mp3" id="6_4gimj"]
+[ext_resource type="Script" path="res://Sarah Assets/Scripts/BackButton.gd" id="6_rx4qu"]
+[ext_resource type="Script" path="res://Sarah Assets/Scripts/HSlider.gd" id="6_x07dj"]
+[ext_resource type="Script" path="res://Sarah Assets/Scripts/ReverbSlider.gd" id="7_52c02"]
+[ext_resource type="Texture2D" uid="uid://chhmarseej06m" path="res://Graces Stuff/button .jpg" id="7_uw4ym"]
+[ext_resource type="Script" path="res://DistortionSlider.gd" id="9_1d571"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_65s83"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cd0wy"]
+size = Vector2(6.21, 3.9)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_slfda"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jv24h"]
+size = Vector2(88, 90.5)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_wimh7"]
+blend_mode = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_fn1g6"]
+font_size = 27
+outline_size = 2
+outline_color = Color(0.105882, 0, 0.65098, 1)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_t0cde"]
+blend_mode = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_edf68"]
+font_size = 27
+outline_size = 2
+outline_color = Color(0.105882, 0, 0.65098, 1)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("6_1kmlp")
+
+[node name="Button" type="Button" parent="Node2D"]
+offset_left = 274.0
+offset_top = 123.0
+offset_right = 663.0
+offset_bottom = 513.0
+scale = Vector2(0.36, 0.319999)
+icon = ExtResource("7_uw4ym")
+metadata/_edit_use_anchors_ = true
+
+[node name="music" type="AudioStreamPlayer2D" parent="Node2D" groups=["Audio"]]
+position = Vector2(-280, 348)
+scale = Vector2(1.94619, 1.87958)
+stream = ExtResource("6_4gimj")
+
+[node name="Draggable Area" type="Area2D" parent="."]
+position = Vector2(652, 333)
+disable_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Draggable Area"]
+position = Vector2(310.25, 196.25)
+scale = Vector2(621.5, 393.5)
+texture = SubResource("CanvasTexture_65s83")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Draggable Area"]
+position = Vector2(310.5, 196)
+scale = Vector2(100, 100)
+shape = SubResource("RectangleShape2D_cd0wy")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(961, 525)
+scale = Vector2(0.991671, 0.99275)
+disable_mode = 2
+script = ExtResource("4_j8ttn")
+bus_name = "Master"
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(0, 0.750003)
+scale = Vector2(0.710938, 0.707031)
+texture = ExtResource("1_ga6md")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="Area2D"]
+disable_mode = 1
+physics_material_override = SubResource("PhysicsMaterial_slfda")
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_jv24h")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("6_rx4qu")
+
+[node name="BackButton" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 7.0
+offset_right = 130.0
+offset_bottom = 90.0
+text = "<"
+
+[node name="VolumeSlider" type="PanelContainer" parent="Control"]
+material = SubResource("CanvasItemMaterial_wimh7")
+layout_direction = 1
+layout_mode = 0
+offset_left = 696.0
+offset_top = 1.0
+offset_right = 929.0
+offset_bottom = 78.0
+scale = Vector2(2.07109, 1.88801)
+
+[node name="ColorRect" type="ColorRect" parent="Control/VolumeSlider"]
+layout_mode = 2
+color = Color(0.666667, 0.760784, 0.843137, 1)
+
+[node name="VboxContents" type="VBoxContainer" parent="Control/VolumeSlider"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_stretch_ratio = 0.0
+
+[node name="Label" type="Label" parent="Control/VolumeSlider/VboxContents"]
+layout_mode = 2
+text = "Master Volume"
+label_settings = SubResource("LabelSettings_fn1g6")
+horizontal_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="Control/VolumeSlider/VboxContents"]
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+script = ExtResource("6_x07dj")
+bus_name = "Master"
+
+[node name="ReverbSlider" type="PanelContainer" parent="Control"]
+material = SubResource("CanvasItemMaterial_t0cde")
+layout_direction = 1
+layout_mode = 0
+offset_left = 696.0
+offset_top = 146.0
+offset_right = 929.0
+offset_bottom = 223.0
+scale = Vector2(2.071, 1.888)
+
+[node name="ColorRect" type="ColorRect" parent="Control/ReverbSlider"]
+layout_mode = 2
+color = Color(0.666667, 0.760784, 0.843137, 1)
+
+[node name="VboxContents" type="VBoxContainer" parent="Control/ReverbSlider"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_stretch_ratio = 0.0
+
+[node name="Label" type="Label" parent="Control/ReverbSlider/VboxContents"]
+layout_mode = 2
+text = "        Reverb        "
+label_settings = SubResource("LabelSettings_edf68")
+horizontal_alignment = 1
+
+[node name="PitchSlider" type="HSlider" parent="Control/ReverbSlider/VboxContents"]
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+script = ExtResource("7_52c02")
+bus_name = "Master"
+
+[node name="RainCheck" type="PanelContainer" parent="Control"]
+material = SubResource("CanvasItemMaterial_t0cde")
+layout_direction = 1
+layout_mode = 0
+offset_left = 1514.0
+offset_top = 95.0
+offset_right = 1595.0
+offset_bottom = 149.0
+scale = Vector2(2.071, 1.888)
+
+[node name="ColorRect" type="ColorRect" parent="Control/RainCheck"]
+layout_mode = 2
+color = Color(0.666667, 0.760784, 0.843137, 1)
+
+[node name="VboxContents" type="VBoxContainer" parent="Control/RainCheck"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_stretch_ratio = 0.0
+
+[node name="Label" type="Label" parent="Control/RainCheck/VboxContents"]
+layout_mode = 2
+text = "Rain"
+
+[node name="CheckButton" type="CheckButton" parent="Control/RainCheck/VboxContents"]
+layout_mode = 2
+alignment = 1
+script = ExtResource("9_1d571")
+
+[connection signal="pressed" from="Node2D/Button" to="Node2D" method="_on_button_pressed"]
+[connection signal="input_event" from="Area2D" to="Area2D" method="_on_Draggable_input_event"]
+[connection signal="pressed" from="Control/BackButton" to="Control" method="_on_back_button_pressed"]
+[connection signal="toggled" from="Control/RainCheck/VboxContents/CheckButton" to="Control/RainCheck/VboxContents/CheckButton" method="_on_toggled"]
