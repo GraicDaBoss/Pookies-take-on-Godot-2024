@@ -42,7 +42,6 @@ func _on_button_6_pressed():
 	pass # Replace with function body.
 	
 
-
 func _on_button_7_pressed():
 	$Soundboom6.play()
 	pass # Replace with function body.
@@ -53,3 +52,6 @@ func _on_button_8_pressed():
 	pass # Replace with function body.
 	
 	
+func _on_h_slider_value_changed(value):
+	
+	pass # Replace with function body.
