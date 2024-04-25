@@ -4,10 +4,10 @@ extends Area2D
 #drag code
 var previous_mouse_position = Vector2()
 var is_dragging = false
-var min_x = 651
-var max_x = 1273
-var min_y = 333
-var max_y = 724
+var min_x = 301
+var max_x = 768
+var min_y = 174
+var max_y = 468
 
 #audio code
 @export var bus_name: String
@@ -24,7 +24,7 @@ func _ready() -> void:
 	#Drag
 	var viewport_size = get_viewport_rect().size
 	position = viewport_size / 2
-	
+	set_process_input(true)
 	#Audio	
 	bus_index = AudioServer.get_bus_index(bus_name)
 	
@@ -67,12 +67,12 @@ func _input(event):
 			previous_mouse_position = event.position
 			emit_signal("position_changed", position)
 			 # Calculate value for y-axis (pitch)
-			var valueY = (global_position.y / 50) - 9.5
+			var valueY = (global_position.y / 50) - 5.5
 			print("Y Value: ", valueY)
 			emit_signal("value_changed", valueY)
 			
 			# Calculate value for x-axis (pitch)
-			var valueX = (global_position.x * 0.0482) - 45
+			var valueX = (global_position.x * 0.01928) -10
 			print("X value: ", valueX)
 			emit_signal("value_changed", valueX)
 

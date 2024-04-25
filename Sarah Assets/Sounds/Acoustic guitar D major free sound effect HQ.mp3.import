@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b4vsriaa0r4vt"
+path="res://.godot/imported/Acoustic guitar D major free sound effect HQ.mp3-95c79337a1b19183e44e7536c74214c7.mp3str"
+
+[deps]
+
+source_file="res://Sarah Assets/Sounds/Acoustic guitar D major free sound effect HQ.mp3"
+dest_files=["res://.godot/imported/Acoustic guitar D major free sound effect HQ.mp3-95c79337a1b19183e44e7536c74214c7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

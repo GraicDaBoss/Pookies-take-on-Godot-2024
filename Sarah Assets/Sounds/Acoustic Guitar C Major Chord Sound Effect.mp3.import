@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dp3avrfqlisti"
+path="res://.godot/imported/Acoustic Guitar C Major Chord Sound Effect.mp3-e5c2a69b0b7ba7379f10073c1b511bad.mp3str"
+
+[deps]
+
+source_file="res://Sarah Assets/Sounds/Acoustic Guitar C Major Chord Sound Effect.mp3"
+dest_files=["res://.godot/imported/Acoustic Guitar C Major Chord Sound Effect.mp3-e5c2a69b0b7ba7379f10073c1b511bad.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

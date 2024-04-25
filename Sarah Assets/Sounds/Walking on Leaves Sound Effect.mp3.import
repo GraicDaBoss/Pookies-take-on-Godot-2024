@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b6xri6xe0d8ny"
+path="res://.godot/imported/Walking on Leaves Sound Effect.mp3-a37fd4400cebca5c91c23ced22340e5a.mp3str"
+
+[deps]
+
+source_file="res://Sarah Assets/Sounds/Walking on Leaves Sound Effect.mp3"
+dest_files=["res://.godot/imported/Walking on Leaves Sound Effect.mp3-a37fd4400cebca5c91c23ced22340e5a.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

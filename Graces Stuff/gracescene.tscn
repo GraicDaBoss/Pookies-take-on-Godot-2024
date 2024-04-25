@@ -18,8 +18,8 @@
 [ext_resource type="Texture2D" uid="uid://cheqgky1fa3sm" path="res://Graces Stuff/star.png" id="13_t7k11"]
 [ext_resource type="AudioStream" uid="uid://cwu1ctwiaqvum" path="res://Graces Stuff/Magical Twinkle Sound Effect (HD).mp3" id="14_xo277"]
 [ext_resource type="AudioStream" uid="uid://q6dksjcs1huw" path="res://Graces Stuff/Crowd Yay Sound Effect.mp3" id="16_tj8ot"]
-[ext_resource type="Script" path="res://Scripts/HSlider.gd" id="19_uxj8p"]
-[ext_resource type="Script" path="res://Scripts/PitchSlider.gd" id="20_hbwgu"]
+[ext_resource type="Script" path="res://Sarah Assets/Scripts/HSlider.gd" id="19_uxj8p"]
+[ext_resource type="Script" path="res://Sarah Assets/Scripts/PitchSlider.gd" id="20_hbwgu"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_726d3"]
 blend_mode = 1

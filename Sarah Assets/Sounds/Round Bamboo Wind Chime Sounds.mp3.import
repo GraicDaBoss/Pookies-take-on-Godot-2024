@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c84kiaxcxg2jf"
+path="res://.godot/imported/Round Bamboo Wind Chime Sounds.mp3-13c53ac1f894c517280723778193777d.mp3str"
+
+[deps]
+
+source_file="res://Sarah Assets/Sounds/Round Bamboo Wind Chime Sounds.mp3"
+dest_files=["res://.godot/imported/Round Bamboo Wind Chime Sounds.mp3-13c53ac1f894c517280723778193777d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

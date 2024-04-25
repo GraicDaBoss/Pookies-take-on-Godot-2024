@@ -1,14 +1,25 @@
-[gd_scene load_steps=18 format=3 uid="uid://csynkerd71ocq"]
+[gd_scene load_steps=29 format=3 uid="uid://csynkerd71ocq"]
 
 [ext_resource type="Texture2D" uid="uid://3mvfynd043fa" path="res://icon.svg" id="1_ga6md"]
 [ext_resource type="Script" path="res://Sarah Assets/Scripts/DraggingScript.gd" id="4_j8ttn"]
+[ext_resource type="AudioStream" uid="uid://b28wyh8qvuqpy" path="res://Sarah Assets/Sounds/Bird.mp3" id="5_wiwb1"]
 [ext_resource type="Script" path="res://Scripts/SoundClick.gd" id="6_1kmlp"]
 [ext_resource type="AudioStream" uid="uid://ca31up0majo2y" path="res://Scripts/boing-6222.mp3" id="6_4gimj"]
+[ext_resource type="AudioStream" uid="uid://b6xri6xe0d8ny" path="res://Sarah Assets/Sounds/Walking on Leaves Sound Effect.mp3" id="6_qhjxa"]
 [ext_resource type="Script" path="res://Sarah Assets/Scripts/BackButton.gd" id="6_rx4qu"]
+[ext_resource type="AudioStream" uid="uid://c7qsjyypmmmuc" path="res://Sarah Assets/Sounds/WIND Sound effect..mp3" id="6_uqdu8"]
 [ext_resource type="Script" path="res://Sarah Assets/Scripts/HSlider.gd" id="6_x07dj"]
 [ext_resource type="Script" path="res://Sarah Assets/Scripts/ReverbSlider.gd" id="7_52c02"]
-[ext_resource type="Texture2D" uid="uid://chhmarseej06m" path="res://Graces Stuff/button .jpg" id="7_uw4ym"]
-[ext_resource type="Script" path="res://DistortionSlider.gd" id="9_1d571"]
+[ext_resource type="AudioStream" uid="uid://c7hfrgfoxogk4" path="res://Sarah Assets/Sounds/Acoustic guitar A major free sound effect HQ.mp3" id="7_lb1n3"]
+[ext_resource type="AudioStream" uid="uid://dp3avrfqlisti" path="res://Sarah Assets/Sounds/Acoustic Guitar C Major Chord Sound Effect.mp3" id="8_qlbmt"]
+[ext_resource type="AudioStream" uid="uid://103twjqwt20k" path="res://Sarah Assets/Sounds/Rain.mp3" id="9_m46lg"]
+[ext_resource type="AudioStream" uid="uid://152mx01iiodr" path="res://Sarah Assets/Sounds/happy flute song HD.mp3" id="9_p82ld"]
+[ext_resource type="AudioStream" uid="uid://b4vsriaa0r4vt" path="res://Sarah Assets/Sounds/Acoustic guitar D major free sound effect HQ.mp3" id="9_tpb81"]
+[ext_resource type="AudioStream" uid="uid://devbst07cmrgo" path="res://Sarah Assets/Sounds/Xylophone sweep.mp3" id="10_78lu4"]
+[ext_resource type="AudioStream" uid="uid://fsi32qvptlhl" path="res://Sarah Assets/Sounds/WOOD SHAKER SOUND EFFECT IN HIGH QUALITY.mp3" id="11_rwbca"]
+[ext_resource type="AudioStream" uid="uid://c84kiaxcxg2jf" path="res://Sarah Assets/Sounds/Round Bamboo Wind Chime Sounds.mp3" id="12_81uya"]
+[ext_resource type="AudioStream" uid="uid://c5em517aq43lv" path="res://Sarah Assets/Sounds/leaves rustling - sound effect.mp3" id="13_4qsrb"]
+[ext_resource type="AudioStream" uid="uid://rkv8ixm83b" path="res://Sarah Assets/Sounds/Cat Meow - Minecraft Sound Effect (HD).mp3" id="14_eh28w"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_65s83"]
 
@@ -41,22 +52,92 @@ outline_color = Color(0.105882, 0, 0.65098, 1)
 [node name="Node2D" type="Node2D" parent="."]
 script = ExtResource("6_1kmlp")
 
-[node name="Button" type="Button" parent="Node2D"]
-offset_left = 274.0
-offset_top = 123.0
-offset_right = 663.0
-offset_bottom = 513.0
-scale = Vector2(0.36, 0.319999)
-icon = ExtResource("7_uw4ym")
-metadata/_edit_use_anchors_ = true
-
 [node name="music" type="AudioStreamPlayer2D" parent="Node2D" groups=["Audio"]]
 position = Vector2(-280, 348)
 scale = Vector2(1.94619, 1.87958)
 stream = ExtResource("6_4gimj")
 
+[node name="RainPlayer" type="AudioStreamPlayer2D" parent="Node2D" groups=["Audio"]]
+position = Vector2(-280, 348)
+scale = Vector2(1.94619, 1.87958)
+stream = ExtResource("9_m46lg")
+bus = &"SarahBus"
+
+[node name="BirdPlayer" type="AudioStreamPlayer2D" parent="Node2D" groups=["Audio"]]
+position = Vector2(-280, 348)
+scale = Vector2(1.94619, 1.87958)
+stream = ExtResource("5_wiwb1")
+bus = &"SarahBus"
+
+[node name="WindPlayer" type="AudioStreamPlayer2D" parent="Node2D" groups=["Audio"]]
+position = Vector2(-280, 348)
+scale = Vector2(1.94619, 1.87958)
+stream = ExtResource("6_uqdu8")
+bus = &"SarahBus"
+
+[node name="StepPlayer" type="AudioStreamPlayer2D" parent="Node2D" groups=["Audio"]]
+position = Vector2(-280, 348)
+scale = Vector2(1.94619, 1.87958)
+stream = ExtResource("6_qhjxa")
+bus = &"SarahBus"
+
+[node name="Strum1" type="AudioStreamPlayer2D" parent="Node2D" groups=["Audio"]]
+position = Vector2(-280, 348)
+scale = Vector2(1.94619, 1.87958)
+stream = ExtResource("7_lb1n3")
+volume_db = 10.124
+
+[node name="Strum2" type="AudioStreamPlayer2D" parent="Node2D" groups=["Audio"]]
+position = Vector2(-280, 348)
+scale = Vector2(1.94619, 1.87958)
+stream = ExtResource("8_qlbmt")
+volume_db = 4.602
+
+[node name="Strum3" type="AudioStreamPlayer2D" parent="Node2D" groups=["Audio"]]
+position = Vector2(-280, 348)
+scale = Vector2(1.94619, 1.87958)
+stream = ExtResource("9_tpb81")
+volume_db = 10.124
+
+[node name="Flute" type="AudioStreamPlayer2D" parent="Node2D" groups=["Audio"]]
+position = Vector2(-280, 348)
+scale = Vector2(1.94619, 1.87958)
+stream = ExtResource("9_p82ld")
+volume_db = -0.92
+
+[node name="Xylophone" type="AudioStreamPlayer2D" parent="Node2D" groups=["Audio"]]
+position = Vector2(-280, 348)
+scale = Vector2(1.94619, 1.87958)
+stream = ExtResource("10_78lu4")
+volume_db = 10.124
+
+[node name="Shaker" type="AudioStreamPlayer2D" parent="Node2D" groups=["Audio"]]
+position = Vector2(-280, 348)
+scale = Vector2(1.94619, 1.87958)
+stream = ExtResource("11_rwbca")
+volume_db = 10.124
+
+[node name="Chime" type="AudioStreamPlayer2D" parent="Node2D" groups=["Audio"]]
+position = Vector2(-280, 348)
+scale = Vector2(1.94619, 1.87958)
+stream = ExtResource("12_81uya")
+volume_db = 10.124
+
+[node name="Leaves" type="AudioStreamPlayer2D" parent="Node2D" groups=["Audio"]]
+position = Vector2(-280, 348)
+scale = Vector2(1.94619, 1.87958)
+stream = ExtResource("13_4qsrb")
+volume_db = 10.124
+
+[node name="Cat" type="AudioStreamPlayer2D" parent="Node2D" groups=["Audio"]]
+position = Vector2(-280, 348)
+scale = Vector2(1.94619, 1.87958)
+stream = ExtResource("14_eh28w")
+volume_db = 4.602
+
 [node name="Draggable Area" type="Area2D" parent="."]
-position = Vector2(652, 333)
+position = Vector2(302, 172)
+scale = Vector2(0.75, 0.75)
 disable_mode = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Draggable Area"]
@@ -70,7 +151,7 @@ scale = Vector2(100, 100)
 shape = SubResource("RectangleShape2D_cd0wy")
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2(961, 525)
+position = Vector2(539, 322)
 scale = Vector2(0.991671, 0.99275)
 disable_mode = 2
 script = ExtResource("4_j8ttn")
@@ -96,21 +177,21 @@ script = ExtResource("6_rx4qu")
 
 [node name="BackButton" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 30.0
-offset_top = 7.0
-offset_right = 130.0
-offset_bottom = 90.0
+offset_left = 18.0
+offset_top = 18.0
+offset_right = 66.0
+offset_bottom = 64.0
 text = "<"
 
 [node name="VolumeSlider" type="PanelContainer" parent="Control"]
 material = SubResource("CanvasItemMaterial_wimh7")
 layout_direction = 1
 layout_mode = 0
-offset_left = 696.0
-offset_top = 1.0
-offset_right = 929.0
-offset_bottom = 78.0
-scale = Vector2(2.07109, 1.88801)
+offset_left = 300.0
+offset_top = 48.0
+offset_right = 533.0
+offset_bottom = 125.0
+scale = Vector2(1, 0.912)
 
 [node name="ColorRect" type="ColorRect" parent="Control/VolumeSlider"]
 layout_mode = 2
@@ -138,11 +219,11 @@ bus_name = "Master"
 material = SubResource("CanvasItemMaterial_t0cde")
 layout_direction = 1
 layout_mode = 0
-offset_left = 696.0
-offset_top = 146.0
-offset_right = 929.0
-offset_bottom = 223.0
-scale = Vector2(2.071, 1.888)
+offset_left = 533.0
+offset_top = 48.0
+offset_right = 766.0
+offset_bottom = 125.0
+scale = Vector2(1, 0.912)
 
 [node name="ColorRect" type="ColorRect" parent="Control/ReverbSlider"]
 layout_mode = 2
@@ -170,10 +251,10 @@ bus_name = "Master"
 material = SubResource("CanvasItemMaterial_t0cde")
 layout_direction = 1
 layout_mode = 0
-offset_left = 1514.0
-offset_top = 95.0
-offset_right = 1595.0
-offset_bottom = 149.0
+offset_left = 824.0
+offset_top = 133.0
+offset_right = 950.0
+offset_bottom = 341.0
 scale = Vector2(2.071, 1.888)
 
 [node name="ColorRect" type="ColorRect" parent="Control/RainCheck"]
@@ -185,16 +266,197 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_stretch_ratio = 0.0
 
+[node name="Label4" type="Label" parent="Control/RainCheck/VboxContents"]
+layout_mode = 2
+text = "      Volume      "
+horizontal_alignment = 1
+
+[node name="BusSlider" type="HSlider" parent="Control/RainCheck/VboxContents"]
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+script = ExtResource("6_x07dj")
+bus_name = "SarahBus"
+
 [node name="Label" type="Label" parent="Control/RainCheck/VboxContents"]
 layout_mode = 2
 text = "Rain"
+horizontal_alignment = 1
 
 [node name="CheckButton" type="CheckButton" parent="Control/RainCheck/VboxContents"]
 layout_mode = 2
+size_flags_horizontal = 4
 alignment = 1
-script = ExtResource("9_1d571")
+icon_alignment = 1
+text_direction = 1
 
-[connection signal="pressed" from="Node2D/Button" to="Node2D" method="_on_button_pressed"]
+[node name="Label2" type="Label" parent="Control/RainCheck/VboxContents"]
+layout_mode = 2
+text = "Birds"
+horizontal_alignment = 1
+
+[node name="CheckButton2" type="CheckButton" parent="Control/RainCheck/VboxContents"]
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+icon_alignment = 1
+text_direction = 1
+
+[node name="Label3" type="Label" parent="Control/RainCheck/VboxContents"]
+layout_mode = 2
+text = "Wind
+"
+horizontal_alignment = 1
+
+[node name="CheckButton3" type="CheckButton" parent="Control/RainCheck/VboxContents"]
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+icon_alignment = 1
+text_direction = 1
+
+[node name="Label5" type="Label" parent="Control/RainCheck/VboxContents"]
+layout_mode = 2
+text = "Steps
+"
+horizontal_alignment = 1
+
+[node name="CheckButton4" type="CheckButton" parent="Control/RainCheck/VboxContents"]
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+icon_alignment = 1
+text_direction = 1
+
+[node name="Buttons" type="PanelContainer" parent="Control"]
+material = SubResource("CanvasItemMaterial_t0cde")
+layout_direction = 1
+layout_mode = 0
+offset_left = 97.0
+offset_top = 66.0
+offset_right = 198.0
+offset_bottom = 447.0
+scale = Vector2(1.5, 1.368)
+
+[node name="ColorRect" type="ColorRect" parent="Control/Buttons"]
+layout_mode = 2
+color = Color(0.666667, 0.760784, 0.843137, 1)
+
+[node name="VboxContents" type="VBoxContainer" parent="Control/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_stretch_ratio = 0.0
+
+[node name="Label" type="Label" parent="Control/Buttons/VboxContents"]
+layout_mode = 2
+text = "Flute"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="Control/Buttons/VboxContents"]
+layout_mode = 2
+text = "
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Control/Buttons/VboxContents"]
+layout_mode = 2
+text = "Xylophone"
+horizontal_alignment = 1
+
+[node name="Button2" type="Button" parent="Control/Buttons/VboxContents"]
+layout_mode = 2
+text = "
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="Control/Buttons/VboxContents"]
+layout_mode = 2
+text = "Shaker"
+horizontal_alignment = 1
+
+[node name="Button3" type="Button" parent="Control/Buttons/VboxContents"]
+layout_mode = 2
+text = "
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label4" type="Label" parent="Control/Buttons/VboxContents"]
+layout_mode = 2
+text = "Chime"
+horizontal_alignment = 1
+
+[node name="Button4" type="Button" parent="Control/Buttons/VboxContents"]
+layout_mode = 2
+text = "
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label5" type="Label" parent="Control/Buttons/VboxContents"]
+layout_mode = 2
+text = "Birds"
+horizontal_alignment = 1
+
+[node name="Button5" type="Button" parent="Control/Buttons/VboxContents"]
+layout_mode = 2
+text = "
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label6" type="Label" parent="Control/Buttons/VboxContents"]
+layout_mode = 2
+text = "Wind
+"
+horizontal_alignment = 1
+
+[node name="Button6" type="Button" parent="Control/Buttons/VboxContents"]
+layout_mode = 2
+text = "
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="PanelContainer" type="PanelContainer" parent="Control"]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 481.0
+offset_right = 770.0
+offset_bottom = 617.0
+
+[node name="ColorRect" type="ColorRect" parent="Control/PanelContainer"]
+layout_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="Control/PanelContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/PanelContainer"]
+layout_mode = 2
+
+[node name="Button4" type="Button" parent="Control/PanelContainer/HBoxContainer"]
+layout_mode = 2
+text = "                                   "
+metadata/_edit_use_anchors_ = true
+
+[node name="Button5" type="Button" parent="Control/PanelContainer/HBoxContainer"]
+layout_mode = 2
+text = "                                   "
+metadata/_edit_use_anchors_ = true
+
+[node name="Button6" type="Button" parent="Control/PanelContainer/HBoxContainer"]
+layout_mode = 2
+text = "                                   "
+metadata/_edit_use_anchors_ = true
+
 [connection signal="input_event" from="Area2D" to="Area2D" method="_on_Draggable_input_event"]
 [connection signal="pressed" from="Control/BackButton" to="Control" method="_on_back_button_pressed"]
-[connection signal="toggled" from="Control/RainCheck/VboxContents/CheckButton" to="Control/RainCheck/VboxContents/CheckButton" method="_on_toggled"]
+[connection signal="toggled" from="Control/RainCheck/VboxContents/CheckButton" to="Node2D" method="_on_check_button_toggled"]
+[connection signal="toggled" from="Control/RainCheck/VboxContents/CheckButton2" to="Node2D" method="_on_check_button_2_toggled"]
+[connection signal="toggled" from="Control/RainCheck/VboxContents/CheckButton3" to="Node2D" method="_on_check_button_3_toggled"]
+[connection signal="toggled" from="Control/RainCheck/VboxContents/CheckButton4" to="Node2D" method="_on_check_button_4_toggled"]
+[connection signal="pressed" from="Control/Buttons/VboxContents/Button" to="Node2D" method="_on_1button_pressed"]
+[connection signal="pressed" from="Control/Buttons/VboxContents/Button2" to="Node2D" method="_on_2button_2_pressed"]
+[connection signal="pressed" from="Control/Buttons/VboxContents/Button3" to="Node2D" method="_on_3button_3_pressed"]
+[connection signal="pressed" from="Control/Buttons/VboxContents/Button4" to="Node2D" method="_on_4button_4_pressed"]
+[connection signal="pressed" from="Control/Buttons/VboxContents/Button5" to="Node2D" method="_on_5button_pressed"]
+[connection signal="pressed" from="Control/Buttons/VboxContents/Button6" to="Node2D" method="_on_6button_pressed"]
+[connection signal="pressed" from="Control/PanelContainer/HBoxContainer/Button4" to="Node2D" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Control/PanelContainer/HBoxContainer/Button5" to="Node2D" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Control/PanelContainer/HBoxContainer/Button6" to="Node2D" method="_on_button_6_pressed"]
